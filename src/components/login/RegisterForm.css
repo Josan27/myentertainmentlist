@@ -3,14 +3,18 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-image: url("../../../public/Captura_de_pantalla_2024-04-04_181522-transformed.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: top center;
 }
 
 .register-form {
-  padding: 2rem;
-  background-color: white;
+  padding: 1rem;
+  background-color: #f5f5f5;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  margin-top: 200px;
 }

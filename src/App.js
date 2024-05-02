@@ -5,6 +5,10 @@ import PrivateRoute from './components/login/PrivateRoute';
 import RegisterForm from './components/login/RegisterForm';
 import { useAuth } from './components/contexto/AuthProvider';
 import {Link } from 'react-router-dom';
+import Nosotros from './components/rutas/Nosotros';
+import ErrorComponent from './components/rutas/ErrorComponent';
+import BotonCambio from './components/botonCambio/BotonCambio';
+
 
 function App() {
 
@@ -28,7 +32,8 @@ function App() {
             <p>hola</p>
           </div>
         </PrivateRoute></>}/>
-        
+        <Route path="/nosotros" element={<PrivateRoute><Nosotros/></PrivateRoute>} />
+        <Route path="*" element={<ErrorComponent/>} />
       </Routes>
     </BrowserRouter>
   );
