@@ -9,3 +9,5 @@ json-server backend/myentertainmentlist.json -m ./node_modules/json-server-auth/
 
 - 2- Lanzar proyecto:
 npm start
+
+#### Proyecto realizado por José Andrés Garrido Gutiérrez
