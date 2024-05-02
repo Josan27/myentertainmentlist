@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "joseandresgarridoguti@gmail.com",
+      "password": "$2a$10$xg3p425/VlIiA0qbeheKvet8o.2wfbvHmT.jH6Zf2jbQ6lel8q2FC",
+      "username": "Jose Andres",
+      "permissions": 0,
+      "myList": {
+        "films": [],
+        "tvshow": [],
+        "anime": []
+      },
+      "id": 1
+    }
+  ],
+  "films": [],
+  "tvshow": [],
+  "anime": []
+}
