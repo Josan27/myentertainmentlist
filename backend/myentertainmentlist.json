@@ -13,7 +13,50 @@
       "id": 1
     }
   ],
-  "films": [],
-  "tvshow": [],
-  "anime": []
+  "films": [
+    {
+      "id": 1,
+      "tituloOriginal": "",
+      "tituloEspanol": "",
+      "cartelera": "",
+      "anio": "",
+      "director": "",
+      "estado": "",
+      "duracion": ""
+    }
+  ],
+  "tvshow": [
+    {
+      "id": 1,
+      "tituloOriginal": "",
+      "tituloEspanol": "",
+      "cartelera": "",
+      "anio": "",
+      "productora": "",
+      "estado": "",
+      "temporadas":[
+        {
+          "temporada": "1",
+          "capitulos": ""
+        }
+      ]
+    }
+  ],
+  "anime": [
+    {
+      "id": 1,
+      "tituloOriginal": "",
+      "tituloEspanol": "",
+      "cartelera": "",
+      "anio": "",
+      "productora": "",
+      "estado": "",
+      "temporadas":[
+        {
+          "temporada": "1",
+          "capitulos": ""
+        }
+      ]
+    }
+  ]
 }

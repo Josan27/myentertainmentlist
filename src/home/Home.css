@@ -1,0 +1,42 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #4e4e4e;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.bar {
+  background-color: #4e4e4e;
+}
+
+.navheader{
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navfooter{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.link {
+  text-decoration: none; 
+  color: rgb(116, 10, 10); 
+  font-weight: bold;
+}

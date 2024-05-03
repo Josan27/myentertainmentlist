@@ -10,4 +10,12 @@ json-server backend/myentertainmentlist.json -m ./node_modules/json-server-auth/
 - 2- Lanzar proyecto:
 npm start
 
+- 3- En caso de que sea necesario
+- Instalar localmente json-server-auth:
+npm i -D json-server-auth
+- Es necesario una version antigua de json-server para usar json-server-auth:
+npm i -g json-server@0.16.3
+- Ejecutar backend:
+json-server backend/carritos.json -m ./node_modules/json-server-auth/
+
 #### Proyecto realizado por José Andrés Garrido Gutiérrez
