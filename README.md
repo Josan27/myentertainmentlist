@@ -1,6 +1,6 @@
 # MyEntertaimentList
 
-“MyEntertainmentList” es una plataforma que permite a los usuarios reali-zar un seguimiento de sus películas, series y anime favoritos. Inspirado en el popular sitio web MyAnimeList, esta aplicación proporcionara a los usuarios una manera conveniente de descubrir, organizar y compartir sus experiencias con diferentes formas de entretenimiento. Pudiendo consultar acerca de sus películas, series y anime favoritos y estar al día de todo lo relacionado con ello. También se les proporcionara a sus usuarios un sis-tema basado en listas para organizar y puntuar, facilita encontrar material nuevo para visualizar en función de las puntuaciones que cada usuario ha-ya dado y permite conectar con usuarios que compartan gustos similares. 
+“MyEntertainmentList” es una plataforma que permite a los usuarios realizar un seguimiento de sus películas, series y anime favoritos. Inspirado en el popular sitio web MyAnimeList, esta aplicación proporcionara a los usuarios una manera conveniente de descubrir, organizar y compartir sus experiencias con diferentes formas de entretenimiento. Pudiendo consultar acerca de sus películas, series y anime favoritos y estar al día de todo lo relacionado con ello. También se les proporcionara a sus usuarios un sistema basado en listas para organizar y puntuar, facilita encontrar material nuevo para visualizar en función de las puntuaciones que cada usuario haya dado y permite conectar con usuarios que compartan gustos similares. 
 
 ## Comandos
 
