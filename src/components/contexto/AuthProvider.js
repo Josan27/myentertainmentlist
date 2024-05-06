@@ -78,10 +78,22 @@ const getToken = () => {
     return state.token;
 };
 
-    
+const [filmsAll, setFilmsAll] = useState([]);
+const [filmsNote, setFilmsNote] = useState([]);
+const [filmsNext, setFilmsNext] = useState([]);
+const [tvshowAll, setTvshowAll] = useState([]);
+const [tvshowNote, setTvshowNote] = useState([]);
+const [tvshowNext, setTvshowNext] = useState([]);
+const [animeAll, setAnimeAll] = useState([]);
+const [animeNote, setAnimeNote] = useState([]);
+const [animeNext, setAnimeNext] = useState([]);
+
 
     return (
-        <AuthContext.Provider value={{login, register, logout, getToken, state, loading}}>
+        <AuthContext.Provider value={{login, register, logout, getToken, state, loading, 
+        filmsAll, setFilmsAll, filmsNote, setFilmsNote, filmsNext, setFilmsNext,
+        tvshowAll, setTvshowAll, tvshowNote, setTvshowNote, tvshowNext, setTvshowNext, 
+        animeAll, setAnimeAll, animeNote, setAnimeNote, animeNext, setAnimeNext }}>
             {children}
         </AuthContext.Provider>
     );

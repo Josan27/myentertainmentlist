@@ -1,5 +1,5 @@
 import { Outlet, Link } from 'react-router-dom';
-import { useAuth } from '../components/contexto/AuthProvider';
+import { useAuth } from '../../components/contexto/AuthProvider';
 import './Home.css';
 
 function Home() {

@@ -1,0 +1,64 @@
+.principal{
+  
+  width: auto;
+  height: 100%;
+  border: 3px solid;
+  border-color: black;
+  padding: 2px;
+}
+
+.films{
+    background-color: #4e4e4e;
+    margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  width: auto;
+  height: auto;
+  border: 3px solid;
+  border-color: black;
+  padding: 2px;
+  color: rgb(116, 10, 10); 
+
+}
+
+.tvshow{
+    background-color: #4e4e4e;
+    margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  width: auto;
+  height: auto;
+  border: 3px solid;
+  border-color: black;
+  padding: 2px;
+  color: rgb(116, 10, 10); 
+
+}
+
+.anime{
+    background-color: #4e4e4e;
+    margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  width: auto;
+  height: auto;
+  border: 3px solid;
+  border-color: black;
+  padding: 2px;
+  color: rgb(116, 10, 10); 
+
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
+
+p{
+  text-align: center;
+  text-decoration: underline;
+}

@@ -1,23 +1,15 @@
-import { BrowserRouter, Route, Routes, NavLink} from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import LoginForm from './components/login/LoginForm';
 import PrivateRoute from './components/login/PrivateRoute';
 import RegisterForm from './components/login/RegisterForm';
-import { useAuth } from './components/contexto/AuthProvider';
 import Nosotros from './components/rutas/Nosotros';
 import ErrorComponent from './components/rutas/ErrorComponent';
-import Home from './home/Home';
-import HomeList from './homelist/HomeList';
+import Home from './components/home/Home';
+import HomeList from './components/homelist/HomeList';
 
 
 function App() {
-
-  const { logout } = useAuth();
-
-  const handleLogout = (e) => {
-    e.preventDefault(); // Evita que Link redireccione, lo hará la protección de ruta.
-    logout();
-  };
 
   return (
     <BrowserRouter>
