@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './Anime.css'
 
 const AnimeAll = ({ animeAll }) => {

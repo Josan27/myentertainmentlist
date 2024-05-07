@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import {getAnimeMore } from '../../../../api/myentertainmentlistApi';
+import {getAnimeMore5 } from '../../../../api/myentertainmentlistApi';
 import {useAuth } from '../../../contexto/AuthProvider';
 import './AnimeList.css'
 import AnimeNote from '../cards/AnimeNote';
@@ -11,7 +11,7 @@ function AnimeListNote() {
 
 
   const downloadAnime = async () => {
-      const animeNote = await getAnimeMore();
+      const animeNote = await getAnimeMore5();
       setAnimeNote(animeNote);
   }
 

@@ -14,7 +14,6 @@
     }
   ],
   "films": [
-    [
       {
           "id": 1,
           "titulo_original": "The Shawshank Redemption",
@@ -147,9 +146,9 @@
       },
       {
         "id": 11,
-        "tituloOriginal": "Deadpool & Wolverine",
-        "tituloEspanol": "Deadpool & Wolverine",
-        "cartelera": "/img/films/.jpg",
+        "titulo_original": "Deadpool & Wolverine",
+        "titulo_español": "Deadpool & Wolverine",
+        "cartelera": "/img/films/deadpool.jpg",
         "anio": 2024,
         "director": "Shawn Levy",
         "estado": "proximamente",
@@ -159,8 +158,8 @@
       },
       {
         "id": 12,
-        "tituloOriginal": "Venom: The Last Dance",
-        "tituloEspanol": "Venom: The Last Dance",
+        "titulo_original": "Venom: The Last Dance",
+        "titulo_español": "Venom: The Last Dance",
         "cartelera": "/img/films/venom.jpg",
         "anio": 2024,
         "director": "Kelly Marcel",
@@ -171,8 +170,8 @@
       },
       {
         "id": 13,
-        "tituloOriginal": "Inside Out 2",
-        "tituloEspanol": "Del Revés 2",
+        "titulo_original": "Inside Out 2",
+        "titulo_español": "Del Revés 2",
         "cartelera": "/img/films/delreves.jpg",
         "anio": 2024,
         "director": "Kelsey Mann",
@@ -183,8 +182,8 @@
       },
       {
         "id": 14,
-        "tituloOriginal": "Terrifier 3",
-        "tituloEspanol": "Terrifier 3",
+        "titulo_original": "Terrifier 3",
+        "titulo_español": "Terrifier 3",
         "cartelera": "/img/films/terrifier.jpg",
         "anio": 2024,
         "director": "Damien Leone",
@@ -195,8 +194,8 @@
       },
       {
         "id": 15,
-        "tituloOriginal": "Smile 2",
-        "tituloEspanol": "Sonríe 2",
+        "titulo_original": "Smile 2",
+        "titulo_español": "Sonríe 2",
         "cartelera": "/img/films/smile.jpg",
         "anio": 2024,
         "director": "Parker Finn",
@@ -205,8 +204,6 @@
         "calificacion": 0.00,
         "descripcion": "No disponible"
       }
-  ]
-  
   ],
   "tvshow": [
     {
@@ -405,7 +402,7 @@
         "id": 15,
         "titulo_original": "Griselda",
         "titulo_español": "Griselda",
-        "cartelera": "/img/tvshow/griselda.png`",
+        "cartelera": "/img/tvshow/griselda.png",
         "año": 2024,
         "productora": "Netflix",
         "estado": "proximamente",
