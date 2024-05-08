@@ -1,6 +1,6 @@
 import './Tvshow.css'
 
-const TvshowAll = ({ tvshowAll }) => {
+const Tvshow = ({ tvshowAll }) => {
   
   return (
     
@@ -11,4 +11,4 @@ const TvshowAll = ({ tvshowAll }) => {
   );
 }
 
-export default TvshowAll;
+export default Tvshow;

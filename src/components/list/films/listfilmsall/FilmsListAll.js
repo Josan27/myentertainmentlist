@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-import { getFilmsFive } from '../../../../api/myentertainmentlistApi';
+import { getFilms } from '../../../../api/myentertainmentlistApi';
 import {useAuth } from '../../../contexto/AuthProvider';
-import './FilmsList.css'
-import FilmsAll from '../cards/FilmsAll';
+import FilmsAll from '../cardsall/FilmsAll';
 
 
 function FilmsListAll() {
@@ -11,7 +10,7 @@ function FilmsListAll() {
 
 
   const downloadFilms = async () => {
-      const filmsAll = await getFilmsFive();
+      const filmsAll = await getFilms();
       setFilmsAll(filmsAll);
   }
 
@@ -20,7 +19,7 @@ function FilmsListAll() {
   }, []);
 
   return (
-      <div className='results'>
+      <div>
 
         {
           filmsAll.length === 0 ? 

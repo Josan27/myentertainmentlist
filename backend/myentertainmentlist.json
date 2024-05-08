@@ -23,7 +23,7 @@
           "director": "Frank Darabont",
           "estado": "disponible",
           "duracion": "142 minutos",
-          "clasificacion": 0.00,
+          "calificacion": 0.00,
           "contadorNotas": 0,
           "descripcion": "El banquero Andy Dufresne es arrestado por matar a su esposa y amante. Tras una dura adaptación, intenta mejorar las condiciones de la prisión y dar esperanza a sus compañeros"
       },
@@ -36,7 +36,7 @@
           "director": "Francis Ford Coppola",
           "estado": "disponible",
           "duracion": "175 minutos",
-          "clasificacion": 0.00,
+          "calificacion": 0.00,
           "contadorNotas": 0,
           "descripcion": "El Padrino narra la historia de un hombre, Vito Corleone, el capo más respetado de Nueva York. Déspota benevolente, implacable con sus rivales, inteligente y fiel a los principios del honor y la amistad."
       },
@@ -49,7 +49,7 @@
           "director": "Christopher Nolan",
           "estado": "disponible",
           "duracion": "152 minutos",
-          "clasificacion": 0.00,
+          "calificacion": 0.00,
           "contadorNotas": 0,
           "descripcion": "Con la ayuda del teniente Jim Gordon y del Fiscal del Distrito Harvey Dent, Batman mantiene a raya el crimen organizado en Gotham. Todo cambia cuando aparece el Joker, un nuevo criminal que desencadena el caos y tiene aterrados a los ciudadanos."
       },
@@ -62,7 +62,7 @@
         "director": "Bong Joon-ho",
         "disponibilidad": "Ya disponible",
         "duracion": "132 minutos",
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Tanto Gi Taek como su familia están sin trabajo. Cuando su hijo mayor, Gi Woo, empieza a recibir clases particulares en la adinerada casa de Park, las dos familias, que tienen mucho en común pese a pertenecer a dos mundos totalmente distintos, comienzan una relación de resultados imprevisibles."
       },
@@ -75,7 +75,7 @@
           "director": "Robert Zemeckis",
           "estado": "disponible",
           "duracion": "142 minutos",
-          "clasificacion": 0.00,
+          "calificacion": 0.00,
           "contadorNotas": 0,
           "descripcion": "Sentado en un banco en Savannah, Georgia, Forrest Gump espera al autobús. Mientras éste tarda en llegar, el joven cuenta su vida a las personas que se sientan a esperar con él. Aunque sufre un pequeño retraso mental, esto no le impide hacer cosas maravillosas."
       },
@@ -88,7 +88,7 @@
           "director": "Lana Wachowski, Lilly Wachowski",
           "estado": "disponible",
           "duracion": "136 minutos",
-          "clasificacion": 0.00,
+          "calificacion": 0.00,
           "contadorNotas": 0,
           "descripcion": "El programador informático Thomas Anderson, más conocido en el mundo de los hacker como Neo, está en el punto de mira del temible agente Smith. Otros dos piratas informáticos, Trinity y Morfeo, se ponen en contacto con Neo para ayudarlo a escapar. Matrix te posee. Sigue al conejo blanco."
       },
@@ -101,7 +101,7 @@
         "director": "Todd Phillips",
         "disponibilidad": "Ya disponible",
         "duracion": "122 minutos",
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "La pasión de Arthur Fleck, un hombre ignorado por la sociedad, es hacer reír a la gente. Sin embargo, una serie de trágicos sucesos harán que su visión del mundo se distorsione considerablemente convirtiéndolo en un brillante criminal."
       },
@@ -114,7 +114,7 @@
           "director": "Christopher Nolan",
           "estado": "disponible",
           "duracion": "148 minutos",
-          "clasificacion": 0.00,
+          "calificacion": 0.00,
           "contadorNotas": 0,
           "descripcion": "Dom Cobb es un ladrón capaz de adentrarse en los sueños de la gente y hacerse con sus secretos. Sin embargo, ahora tiene que llevar a cabo una misión diferente a lo que ha hecho siempre: realizar una incepción para implantar una idea en el subconsciente de una persona."
       },
@@ -127,7 +127,7 @@
         "director": "Anthony Russo, Joe Russo",
         "disponibilidad": "Ya disponible",
         "duracion": "181 minutos",
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Después de los eventos devastadores de Avengers: Infinity War, el universo está en ruinas debido a las acciones de Thanos, el Titán Loco. Con la ayuda de los aliados que quedaron, los Vengadores deberán reunirse una vez más para intentar detenerlo y restaurar el orden en el universo de una vez por todas."
       },
@@ -140,7 +140,7 @@
           "director": "Peter Jackson",
           "estado": "disponible",
           "duracion": "201 minutos",
-          "clasificacion": 0.00,
+          "calificacion": 0.00,
           "contadorNotas": 0,
           "descripcion": "La batalla por la Tierra Media ha empezado. Las fuerzas de Saruman han sido destruidas y por primera vez parece que hay una pequeña esperanza. Sin embargo, el poder de Sauron crece y su interés se centra en Gondor, el último reducto de los hombres, cuyo heredero es Aragorn."
       },
@@ -149,7 +149,7 @@
         "titulo_original": "Deadpool & Wolverine",
         "titulo_español": "Deadpool & Wolverine",
         "cartelera": "/img/films/deadpool.jpg",
-        "anio": 2024,
+        "año": 2024,
         "director": "Shawn Levy",
         "estado": "proximamente",
         "duracion": "proximamente",
@@ -161,7 +161,7 @@
         "titulo_original": "Venom: The Last Dance",
         "titulo_español": "Venom: The Last Dance",
         "cartelera": "/img/films/venom.jpg",
-        "anio": 2024,
+        "año": 2024,
         "director": "Kelly Marcel",
         "estado": "proximamente",
         "duracion": "proximamente",
@@ -173,7 +173,7 @@
         "titulo_original": "Inside Out 2",
         "titulo_español": "Del Revés 2",
         "cartelera": "/img/films/delreves.jpg",
-        "anio": 2024,
+        "año": 2024,
         "director": "Kelsey Mann",
         "estado": "proximamente",
         "duracion": "proximamente",
@@ -185,7 +185,7 @@
         "titulo_original": "Terrifier 3",
         "titulo_español": "Terrifier 3",
         "cartelera": "/img/films/terrifier.jpg",
-        "anio": 2024,
+        "año": 2024,
         "director": "Damien Leone",
         "estado": "proximamente",
         "duracion": "proximamente",
@@ -197,7 +197,7 @@
         "titulo_original": "Smile 2",
         "titulo_español": "Sonríe 2",
         "cartelera": "/img/films/smile.jpg",
-        "anio": 2024,
+        "año": 2024,
         "director": "Parker Finn",
         "estado": "proximamente",
         "duracion": "proximamente",
@@ -216,7 +216,7 @@
         "estado": "disponible",
         "temporadas": 5,
         "capitulos": 62,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Un profesor de química con cáncer terminal se asocia con un exalumno suyo para fabricar y vender metanfetamina a fin de que su familia no pase apuros económicos."
     },
@@ -230,7 +230,7 @@
         "estado": "disponible",
         "temporadas": 8,
         "capitulos": 73,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "La trama se sitúa en un mundo ficticio con elementos fantásticos, como dragones y poderes, pero también otros muy reales como son las luchas de poder, los enfrentamientos políticos, las traiciones y la continua guerra por el trono que gobierna los siete reinos de Poniente."
     },
@@ -244,7 +244,7 @@
         "estado": "disponible",
         "temporadas": 4,
         "capitulos": 34,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "A raíz de la desaparición de un niño, un pueblo desvela un misterio relacionado con experimentos secretos, fuerzas sobrenaturales aterradoras y una niña muy extraña."
     },
@@ -258,7 +258,7 @@
         "estado": "disponible",
         "temporadas": 9,
         "capitulos": 199,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "La serie THE OFFICE es una parodia de un documental real pero que es ficticio, sobre las travesuras de trabajo de 9 a 5 de los empleados de una sucursal de una compañía de papel con sede en Pennsylvania, donde no hay mucho trabajo real, pero que está llena de personajes coloridos."
     },
@@ -272,7 +272,7 @@
         "estado": "disponible",
         "temporadas": 5,
         "capitulos": 22,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Un videojuego transforma una larga amistad, una red social debe hacer frente a un secuestro y una adolescente intima con la versión virtual de su cantante favorita."
     },
@@ -286,7 +286,7 @@
         "estado": "disponible",
         "temporadas": 5,
         "capitulos": 48,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Ocho ladrones toman rehenes en la Fábrica Nacional de Moneda y Timbre de España, mientras el líder de la banda manipula a la policía para cumplir con su plan."
     },
@@ -300,7 +300,7 @@
         "estado": "disponible",
         "temporadas": 2,
         "capitulos": 16,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Ser cazarrecompensas es una profesión complicada. En el anárquico período tras el hundimiento del Imperio Galáctico, un cazarrecompensas con armadura conocido solo como El Mandaloriano emprende una misión bien remunerada aunque enigmática."
     },
@@ -314,7 +314,7 @@
         "estado": "disponible",
         "temporadas": 5,
         "capitulos": 50,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "The Crown es una serie de televisión estadounidense/británica para emisión en streaming de drama histórico acerca del reinado de la reina Isabel II, creada y escrita principalmente por Peter Morgan, y producida por Left Bank Pictures y Sony Pictures Television para Netflix."
     },
@@ -328,7 +328,7 @@
         "estado": "disponible",
         "temporadas": 10,
         "capitulos": 236,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Esta comedia televisiva sigue las aventuras y desventuras en el trabajo, el amor y la vida de seis amigos veinteañeros que viven en Manhattan durante los noventa."
     },
@@ -342,7 +342,7 @@
         "estado": "disponible",
         "temporadas": 4,
         "capitulos": 12,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "contadorNotas": 0,
         "descripcion": "Ubicada en el Londres del siglo XXI, la serie sigue los pasos del excéntrico detective Sherlock Holmes junto a su compañero el doctor John H. Watson, en su búsqueda por resolver los brutales crímenes que se van desarrollando."
     },
@@ -356,7 +356,7 @@
       "estado": "proximamente",
       "temporadas": 0,
       "capitulos": 0,
-      "clasificacion": 0.00,
+      "calificacion": 0.00,
       "descripcion": "Avatar: La leyenda de Aang narra el viaje para salvar el mundo del avatar Aang, desaparecido durante cien años, junto a sus compañeros Katara, Sokka, Appa y Momo mientras son perseguidos por el príncipe Zuko."
     },
     {
@@ -369,7 +369,7 @@
         "estado": "proximamente",
         "temporadas": 0,
         "capitulos": 0,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "descripcion": "Ambientada en la Era de la Nueva República, sigue el viaje de cuatro niños que hacen un misterioso descubrimiento en su (aparentemente seguro) planeta natal. La pandilla terminará perdiéndose en una galaxia extraña y peligrosa, desesperados por encontrar el camino de vuelta a casa mientras tratan con aliados y enemigos insólitos en la aventura de sus vidas."
     },
     {
@@ -382,7 +382,7 @@
         "estado": "proximamente",
         "temporadas": 0,
         "capitulos": 0,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "descripcion": "Serie centrada en el personaje de El Pingüino, de la película 'The Batman' (2022), interpretado por Colin Farrell."
     },
     {
@@ -395,7 +395,7 @@
         "estado": "proximamente",
         "temporadas": 0,
         "capitulos": 0,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "descripcion": "Durante la Segunda Guerra Mundial muchos aviadores del 100º Grupo de Bombardeo (el 'Bloody Hundredth') arriesgaron sus vidas llevando a cabo peligrosos bombardeos sobre la Alemania nazi y lidiando con las condiciones gélidas, la falta de oxígeno y el terror absoluto de combatir a 25.000 pies de altura."
     },
     {
@@ -408,7 +408,7 @@
         "estado": "proximamente",
         "temporadas": 0,
         "capitulos": 0,
-        "clasificacion": 0.00,
+        "calificacion": 0.00,
         "descripcion": "Esta dramatización inspirada en hechos reales sigue la vida de Griselda Blanco, desde sus inicios en Medellín hasta su consolidación como «la Madrina» de la droga en Miami."
     }
     ],

@@ -45,3 +45,9 @@ header {
   color: rgb(116, 10, 10); 
   font-weight: bold;
 }
+
+.invisible{
+  color:  #4e4e4e;
+  font-size: 8px;
+  user-select: none;
+}

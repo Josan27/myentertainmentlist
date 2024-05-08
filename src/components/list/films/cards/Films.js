@@ -1,6 +1,6 @@
 import './Films.css'
 
-const FilmsAll = ({ filmsAll }) => {
+const Films = ({ filmsAll }) => {
   
   return (
     
@@ -11,4 +11,4 @@ const FilmsAll = ({ filmsAll }) => {
   );
 }
 
-export default FilmsAll;
+export default Films;

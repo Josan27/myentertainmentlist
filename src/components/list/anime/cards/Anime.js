@@ -1,6 +1,6 @@
 import './Anime.css'
 
-const AnimeAll = ({ animeAll }) => {
+const Anime = ({ animeAll }) => {
   
   return (
     
@@ -11,4 +11,4 @@ const AnimeAll = ({ animeAll }) => {
   );
 }
 
-export default AnimeAll;
+export default Anime;

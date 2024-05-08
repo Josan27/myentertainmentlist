@@ -62,3 +62,7 @@ p{
   text-align: center;
   text-decoration: underline;
 }
+
+.pahover:hover{
+  color: white;
+}

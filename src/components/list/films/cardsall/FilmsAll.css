@@ -1,0 +1,47 @@
+.portadaAll{
+    background-color: #4e4e4e;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    height: 50%;
+    border: 3px solid;
+    border-color: black;
+    padding: 2px;
+    align-items: center;
+    padding: 2px;
+    
+}
+
+p{
+    text-decoration: none;
+}
+
+.imadiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 400px; 
+    height: 400px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(116, 10, 10); 
+
+}
+
+h3{
+    text-align: center;
+    color: rgb(116, 10, 10); 
+
+}
+
+.description{
+    font-size: 14px;
+}

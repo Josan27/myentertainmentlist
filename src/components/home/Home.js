@@ -14,7 +14,7 @@ function Home() {
     <div className="home">
       <header>
         <nav className='navheader'>
-          <div></div>
+          <div className='invisible'>MYENTERTAINMENTLIST</div>
           <Link to="/homelist" className='link'><h1>MYENTERTAINMENTLIST</h1></Link>
           <Link to="/perfil" className='link'>Mi perfil</Link>
         </nav>

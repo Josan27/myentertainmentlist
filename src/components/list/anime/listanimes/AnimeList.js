@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { getAnimeFive } from '../../../../api/myentertainmentlistApi';
 import {useAuth } from '../../../contexto/AuthProvider';
 import './AnimeList.css'
-import AnimeAll from '../cards/AnimeAll';
+import Anime from '../cards/Anime';
 
 
-function AnimeListAll() {
+function AnimeList() {
 
   const {animeAll, setAnimeAll} = useAuth();
 
@@ -27,11 +27,11 @@ function AnimeListAll() {
             <p>No se han encontrado Animes</p>
           :
           animeAll.map(animeAll =>
-              <AnimeAll animeAll={animeAll}/>
+              <Anime animeAll={animeAll}/>
             )
         }
       </div>
   );
 }
 
-export default AnimeListAll;
+export default AnimeList;

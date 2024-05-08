@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { getTvShowFive } from '../../../../api/myentertainmentlistApi';
 import {useAuth } from '../../../contexto/AuthProvider';
 import './TvshowList.css'
-import TvshowAll from '../cards/TvshowAll';
+import Tvshow from '../cards/Tvshow';
 
 
-function TvshowListAll() {
+function TvshowList() {
 
   const {tvshowAll, setTvshowAll} = useAuth();
 
@@ -27,11 +27,11 @@ function TvshowListAll() {
             <p>No se han encontrado Series</p>
           :
           tvshowAll.map(tvshowAll =>
-              <TvshowAll tvshowAll={tvshowAll}/>
+              <Tvshow tvshowAll={tvshowAll}/>
             )
         }
       </div>
   );
 }
 
-export default TvshowListAll;
+export default TvshowList;
