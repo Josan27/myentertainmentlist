@@ -1,36 +1,40 @@
-import { useEffect } from 'react';
-import { getFilmsFive } from '../../../../api/myentertainmentlistApi';
+import { useEffect, useState } from 'react';
+import { getFilmsFive, getFilmsNext5, getFilmsMore5 } from '../../../../api/myentertainmentlistApi';
 import {useAuth } from '../../../contexto/AuthProvider';
 import './FilmsList.css'
 import Films from '../cards/Films';
 
 
-function FilmsList() {
+const FilmsList = ({ type }) => {
+  const { setFilmsAll, setFilmsNext, setFilmsNote } = useAuth();
+  const [filmsData, setFilmsData] = useState([]);
 
-  const {filmsAll, setFilmsAll} = useAuth();
-
-
-  const downloadFilms = async () => {
-      const filmsAll = await getFilmsFive();
-      setFilmsAll(filmsAll);
-  }
+  const fetchData = async () => {
+    let filmsData;
+    if (type === 'next') {
+      filmsData = await getFilmsNext5();
+      setFilmsNext(filmsData);
+    } else if(type=== 'note'){
+      filmsData = await getFilmsMore5();
+      setFilmsNote(filmsData);
+    } else {
+      filmsData = await getFilmsFive();
+      setFilmsAll(filmsData);
+    }
+    setFilmsData(filmsData);
+  };
 
   useEffect(() => {
-    downloadFilms();
-  }, []);
+    fetchData();
+  }, [type]);
 
   return (
-      <div className='results'>
-
-        {
-          filmsAll.length === 0 ? 
-            <p>No se han encontrado Peliculas</p>
-          :
-          filmsAll.map(filmsAll =>
-              <Films filmsAll={filmsAll}/>
-            )
-        }
-      </div>
+    <div className='results'>
+      {filmsData.length === 0 ? 
+        <p>No se han encontrado Peliculas</p> :
+        filmsData.map(film => <Films key={film.id} film={film} />)
+      }
+    </div>
   );
 }
 

@@ -1,12 +1,11 @@
 import './Films.css'
 
-const Films = ({ filmsAll }) => {
+const Films = ({ film }) => {
   
   return (
-    
-    <div className="portada" key={filmsAll.id} >
-      <img src={filmsAll.cartelera} className='imagen' height="200" width="400" alt={`Portada de ${filmsAll.titulo_español}`} />
-      <p>{filmsAll.titulo_español}</p>
+    <div className="portada" key={film.id}>
+      <img src={film.cartelera} className='imagen' height="200" width="400" alt={`Portada de ${film.titulo_español}`} />
+      <p>{film.titulo_español}</p>
     </div>
   );
 }

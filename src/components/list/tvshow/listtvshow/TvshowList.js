@@ -1,36 +1,41 @@
-import { useEffect } from 'react';
-import { getTvShowFive } from '../../../../api/myentertainmentlistApi';
+import { useEffect, useState } from 'react';
+import { getTvShowFive, getTvshowMore5, getTvShowNext5 } from '../../../../api/myentertainmentlistApi';
 import {useAuth } from '../../../contexto/AuthProvider';
 import './TvshowList.css'
 import Tvshow from '../cards/Tvshow';
 
 
-function TvshowList() {
+const TvshowList = ({ type }) =>  {
 
-  const {tvshowAll, setTvshowAll} = useAuth();
+  const {setTvshowNext, setTvshowAll, setTvshowNote} = useAuth();
+  const [tvshowData, setTvshowData] = useState([]);
 
-
-  const downloadTvshow = async () => {
-      const tvshowAll = await getTvShowFive();
-      setTvshowAll(tvshowAll);
-  }
+  const fetchData = async () => {
+    let tvshowData;
+    if (type === 'next') {
+      tvshowData = await getTvShowNext5();
+      setTvshowNext(tvshowData);
+    } else if(type=== 'note'){
+      tvshowData = await getTvshowMore5();
+      setTvshowNote(tvshowData);
+    } else {
+      tvshowData = await getTvShowFive();
+      setTvshowAll(tvshowData);
+    }
+    setTvshowData(tvshowData);
+  };
 
   useEffect(() => {
-    downloadTvshow();
-  }, []);
+    fetchData();
+  }, [type]);
 
   return (
-      <div className='results'>
-
-        {
-          tvshowAll.length === 0 ? 
-            <p>No se han encontrado Series</p>
-          :
-          tvshowAll.map(tvshowAll =>
-              <Tvshow tvshowAll={tvshowAll}/>
-            )
-        }
-      </div>
+    <div className='results'>
+      {tvshowData.length === 0 ? 
+        <p>No se han encontrado Series</p> :
+        tvshowData.map(tvshow =><Tvshow key={tvshow.id} tvshow={tvshow}/>)
+      }
+    </div>
   );
 }
 
