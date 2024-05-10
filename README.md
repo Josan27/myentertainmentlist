@@ -1,6 +1,14 @@
 # MyEntertainmentList
 
-“MyEntertainmentList” es una plataforma que permite a los usuarios realizar un seguimiento de sus películas, series y anime favoritos. Inspirado en el popular sitio web MyAnimeList, esta aplicación proporcionara a los usuarios una manera conveniente de descubrir, organizar y compartir sus experiencias con diferentes formas de entretenimiento. Pudiendo consultar acerca de sus películas, series y anime favoritos y estar al día de todo lo relacionado con ello. También se les proporcionara a sus usuarios un sistema basado en listas para organizar y puntuar, facilita encontrar material nuevo para visualizar en función de las puntuaciones que cada usuario haya dado y permite conectar con usuarios que compartan gustos similares. Esta aplicacion a sido realizada con react y node js.
+“MyEntertainmentList” es una plataforma que permite a los usuarios realizar un seguimiento de sus películas, series y anime favoritos. Inspirado en el popular sitio web MyAnimeList, esta aplicación proporcionara a los usuarios una manera conveniente de descubrir, organizar y compartir sus experiencias con diferentes formas de entretenimiento. Pudiendo consultar acerca de sus películas, series y anime favoritos y estar al día de todo lo relacionado con ello. También se les proporcionara a sus usuarios un sistema basado en listas para organizar y puntuar, facilita encontrar material nuevo para visualizar en función de las puntuaciones que cada usuario haya dado y permite conectar con usuarios que compartan gustos similares.
+
+## Tecnologías Utilizadas
+
+- **React:** Utilizado para construir la interfaz de usuario de la aplicación.
+
+- **Node.js:** Utilizado para construir el backend de la aplicación.
+
+- **JSON Server:** Utilizado para simular un servidor RESTful y proporcionar una base de datos JSON para el desarrollo y pruebas de la aplicación.
 
 ## Comandos
 

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../homelist/HomeList.css'
-import AnimeList from '../list/anime/listanimes/AnimeList';
-import FilmsList from '../list/films/listfilms/FilmsList';
-import TvshowList from '../list/tvshow/listtvshow/TvshowList';
+import List5Home from '../list/list/List5Home';
 import { Link } from 'react-router-dom';
 
 
@@ -27,9 +25,9 @@ const HomeList = () => {
         <h2 onClick={togglefilmsVisibility}>{filmsVisible} Peliculas</h2>
         {filmsVisible &&(
           <div className="contentFilms">   
-            <div className='allContent'><Link to="/filmslistall" className='link'><p className='pahover'>Algunos de ellos:</p></Link><FilmsList></FilmsList></div>
-            <div className='popularContent'><Link to="/filmsnoteall" className='link'><p className='pahover'>Mejores calificados:</p></Link><FilmsList type="note"></FilmsList></div>
-            <div className='nextContent'><Link to="/filmsnextall" className='link'><p className='pahover'>Proximamente:</p></Link><FilmsList type="next"></FilmsList></div>
+            <div className='allContent'><Link to={`/filmslistall/somefilms`} className='link'><p className='pahover'>Algunos de ellos:</p></Link><List5Home type="somefilms"></List5Home></div>
+            <div className='popularContent'><Link to={`/filmsnoteall/notefilms`} className='link'><p className='pahover'>Mejores calificados:</p></Link><List5Home type="notefilms"></List5Home></div>
+            <div className='nextContent'><Link to={`/filmsnextall/nextfilms`} className='link'><p className='pahover'>Proximamente:</p></Link><List5Home type="nextfilms"></List5Home></div>
           </div>
         )}
       </div>
@@ -37,9 +35,9 @@ const HomeList = () => {
         <h2 onClick={toggletvshowVisibility}>{tvshowVisible} Series</h2>
         {tvshowVisible &&(
           <div className="contentTvshow">
-            <div className='allContent'><Link to="/tvshowlistall" className='link'><p className='pahover'>Algunos de ellos:</p></Link><TvshowList></TvshowList></div>
-            <div className='popularContent'><Link to="/tvshownoteall" className='link'><p className='pahover'>Mejores calificados:</p></Link><TvshowList type="note"></TvshowList></div>
-            <div className='nextContent'><Link to="/tvshownextall" className='link'><p className='pahover'>Proximamente:</p></Link><TvshowList type="next"></TvshowList></div>
+            <div className='allContent'><Link to={`/tvshowlistall/sometvshow`} className='link'><p className='pahover'>Algunos de ellos:</p></Link><List5Home type="sometvshow"></List5Home></div>
+            <div className='popularContent'><Link to={`/tvshownoteall/notetvshow`} className='link'><p className='pahover'>Mejores calificados:</p></Link><List5Home type="notetvshow"></List5Home></div>
+            <div className='nextContent'><Link to={`/tvshownextall/nexttvshow`} className='link'><p className='pahover'>Proximamente:</p></Link><List5Home type="nexttvshow"></List5Home></div>
           </div>
         )}
       </div>
@@ -47,9 +45,9 @@ const HomeList = () => {
         <h2 onClick={toggleanimeVisibility}>{animeVisible} Anime</h2>
         {animeVisible &&(
           <div className="contentAnime">
-            <div className='allContent'><Link to="/animelistall" className='link'><p className='pahover'>Algunos de ellos:</p></Link><AnimeList></AnimeList></div>
-            <div className='popularContent'><Link to="/animenoteall" className='link'><p className='pahover'>Mejores calificados:</p></Link><AnimeList type="note"></AnimeList></div>
-            <div className='nextContent'><Link to="/animenextall" className='link'><p className='pahover'>Proximamente:</p></Link><AnimeList type="next"></AnimeList></div>
+            <div className='allContent'><Link to={`/animelistall/someanime`} className='link'><p className='pahover'>Algunos de ellos:</p></Link><List5Home type="someanime"></List5Home></div>
+            <div className='popularContent'><Link to={`/animenoteall/noteanime`} className='link'><p className='pahover'>Mejores calificados:</p></Link><List5Home type="noteanime"></List5Home></div>
+            <div className='nextContent'><Link to={`/animenextall/nextanime`} className='link'><p className='pahover'>Proximamente:</p></Link><List5Home type="nextanime"></List5Home></div>
           </div>
         )}
       </div>
