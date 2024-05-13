@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import './App.css';
 import LoginForm from './components/login/LoginForm';
 import PrivateRoute from './components/login/PrivateRoute';
 import RegisterForm from './components/login/RegisterForm';

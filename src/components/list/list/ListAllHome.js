@@ -11,7 +11,6 @@ import { useParams } from 'react-router-dom';
 
 const ListAllHome = () => {
     const { type } = useParams();
-    console.log(type);
   const { setFilmsAll, setFilmsNext, setFilmsNote, setAnimeNext, setAnimeAll, setAnimeNote, setTvshowNext, setTvshowAll, setTvshowNote} = useAuth();
   const [listData, setListData] = useState([]);
 

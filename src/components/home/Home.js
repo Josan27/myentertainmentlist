@@ -1,6 +1,7 @@
 import { Outlet, Link } from 'react-router-dom';
 import { useAuth } from '../../components/contexto/AuthProvider';
 import './Home.css';
+import MenuUser from '../menuUser/MenuUser'
 
 function Home() {
   const { logout } = useAuth();
@@ -15,8 +16,8 @@ function Home() {
       <header>
         <nav className='navheader'>
           <div className='invisible'>MYENTERTAINMENTLIST</div>
-          <Link to="/homelist" className='link'><h1>MYENTERTAINMENTLIST</h1></Link>
-          <Link to="/perfil" className='link'>Mi perfil</Link>
+          <Link to="/homelist" className='link titulo'><h1>MYENTERTAINMENTLIST</h1></Link>
+          <Link to="/perfil" className='link perfil'>Mi perfil</Link>
         </nav>
       </header>
       <div className="container">

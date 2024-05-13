@@ -2,8 +2,7 @@
   
   width: auto;
   height: 100%;
-  border: 3px solid;
-  border-color: black;
+  margin-top: 50px;
   padding: 2px;
 }
 
@@ -19,7 +18,8 @@
   border-color: black;
   padding: 2px;
   color: rgb(116, 10, 10); 
-
+  border-radius: 50px;
+  box-shadow: rgba(116, 10, 10, 0.4) 5px 5px, rgba(116, 10, 10, 0.3) 10px 10px, rgba(116, 10, 10, 0.2) 15px 15px, rgba(116, 10, 10, 0.1) 20px 20px, rgba(116, 10, 10, 0.05) 25px 25px;
 }
 
 .tvshow{
@@ -34,7 +34,8 @@
   border-color: black;
   padding: 2px;
   color: rgb(116, 10, 10); 
-
+  border-radius: 50px;
+  box-shadow: rgba(116, 10, 10, 0.4) 5px 5px, rgba(116, 10, 10, 0.3) 10px 10px, rgba(116, 10, 10, 0.2) 15px 15px, rgba(116, 10, 10, 0.1) 20px 20px, rgba(116, 10, 10, 0.05) 25px 25px;
 }
 
 .anime{
@@ -49,7 +50,8 @@
   border-color: black;
   padding: 2px;
   color: rgb(116, 10, 10); 
-
+  border-radius: 50px;
+  box-shadow: rgba(116, 10, 10, 0.4) 5px 5px, rgba(116, 10, 10, 0.3) 10px 10px, rgba(116, 10, 10, 0.2) 15px 15px, rgba(116, 10, 10, 0.1) 20px 20px, rgba(116, 10, 10, 0.05) 25px 25px;
 }
 
 h2{
@@ -61,8 +63,22 @@ h2{
 p{
   text-align: center;
   text-decoration: underline;
+  font-weight: bold;
+}
+
+.pahover{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 25px;
+  box-shadow: rgb(133, 131, 131) 3px 3px 6px 0px inset, rgba(133, 131, 131,0.5) -3px -3px 6px 1px inset;
+  border-radius: 100px;
+  font-family: Arial, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
 }
 
 .pahover:hover{
   color: white;
+  text-decoration: underline;
+  font-weight: bold;
 }

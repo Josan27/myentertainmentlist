@@ -6,12 +6,16 @@
   background-repeat: no-repeat;
   background-size: 50%;
   background-position:  center; 
-  background-color: rgb(211, 204, 204); 
+  background-color: rgb(238, 234, 234); 
 }
 
 header {
   background-color: #4e4e4e;
-  height: 80px;
+  height: 60px;
+  border: 3px solid;
+  border-color: black;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: rgba(116, 10, 10, 0.56) 0px 22px 70px 4px;
 }
 
 .container {
@@ -21,6 +25,11 @@ header {
 
 .bar {
   background-color: #4e4e4e;
+  border: 3px solid;
+  border-color: black;
+  border-radius: 25px 25px 0px 0px;
+  box-shadow: rgba(116, 10, 10, 0.56) 22px 22px 70px 40px;
+
 }
 
 .navheader{
@@ -50,4 +59,15 @@ header {
   color:  #4e4e4e;
   font-size: 8px;
   user-select: none;
+}
+
+.perfil{
+  margin-top: 18px;
+}
+
+.titulo{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -15px;
 }
