@@ -1,7 +1,8 @@
 import { Outlet, Link } from 'react-router-dom';
 import { useAuth } from '../../components/contexto/AuthProvider';
 import './Home.css';
-import MenuUser from '../menuUser/MenuUser'
+import React from 'react';
+import PopoverMenu from '../menuUser/PopoverMenu ';
 
 function Home() {
   const { logout } = useAuth();
@@ -17,7 +18,7 @@ function Home() {
         <nav className='navheader'>
           <div className='invisible'>MYENTERTAINMENTLIST</div>
           <Link to="/homelist" className='link titulo'><h1>MYENTERTAINMENTLIST</h1></Link>
-          <Link to="/perfil" className='link perfil'>Mi perfil</Link>
+          <div className='link perfil'><PopoverMenu/></div>
         </nav>
       </header>
       <div className="container">

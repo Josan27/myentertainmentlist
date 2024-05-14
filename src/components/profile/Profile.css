@@ -1,0 +1,32 @@
+.perfil-container {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 700px; 
+    height: 400px;
+    margin: 0 auto;
+    background-color: #4e4e4e;
+}
+
+.perfil-info {
+    color: rgb(116, 10, 10); 
+    display: flex;
+    align-items: center;
+    
+}
+
+.perfil-img img {
+    width: 200px; 
+    height: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.perfil-details {
+    flex: 1;
+}
+
+.perfil-details p {
+    margin-bottom: 10px;
+    font-size: 30px;
+}

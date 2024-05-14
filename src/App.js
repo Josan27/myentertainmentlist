@@ -6,6 +6,7 @@ import Nosotros from './components/rutas/Nosotros';
 import ErrorComponent from './components/rutas/ErrorComponent';
 import Home from './components/home/Home';
 import HomeList from './components/homelist/HomeList';
+import Profile from './components/profile/Profile'
 
 import ListAllHome from './components/list/list/ListAllHome';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/filmsnextall/:type" element={<PrivateRoute><ListAllHome/></PrivateRoute>} />
           <Route path="/tvshownextall/:type" element={<PrivateRoute><ListAllHome/></PrivateRoute>} />
           <Route path="/animenextall/:type" element={<PrivateRoute><ListAllHome/></PrivateRoute>} />
+          <Route path="/profile" element={<PrivateRoute><Profile/></PrivateRoute>} />
           <Route path="/homelist" element={<PrivateRoute><HomeList/></PrivateRoute>} />
           <Route path="/nosotros" element={<PrivateRoute><Nosotros/></PrivateRoute>} />
           <Route path="*" element={<ErrorComponent/>} />

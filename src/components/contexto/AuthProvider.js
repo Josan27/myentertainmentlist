@@ -57,8 +57,8 @@ const login = async (email, password) => {
 
 const register = async (email, password, username) => {
     try {
-      let films = [], tvshow = [], anime = []
-        const response = await axios.post('http://localhost:3000/register', { email, password, username, permissions: 0, myList: { films, tvshow, anime}});
+      let films = [], tvshow = [], anime = [], img = "/img/user.png"
+        const response = await axios.post('http://localhost:3000/register', { email, password, username, img, permissions: 0, myList: { films, tvshow, anime}});
         const { accessToken, user } = response.data;
         localStorage.setItem('token', accessToken);
         localStorage.setItem('user', JSON.stringify(user));
