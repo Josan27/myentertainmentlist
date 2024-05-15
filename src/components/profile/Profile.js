@@ -15,7 +15,6 @@ function Profile() {
                 <div className="perfil-details">
                     <p><strong>Nombre de usuario:</strong> {state.user.username}</p>
                     <p><strong>Email:</strong> {state.user.email}</p>
-                    {/* Agrega más campos según sea necesario */}
                 </div>
             </div>
         </div>

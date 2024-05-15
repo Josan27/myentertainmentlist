@@ -1,0 +1,21 @@
+.buscador{
+    background-color: #4e4e4e;
+    color: rgb(116, 10, 10); 
+    text-align: center;
+    font-weight: bold;
+    width: 300px;
+    height: 25px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: rgb(133, 131, 131) 3px 3px 6px 0px inset, rgba(133, 131, 131,0.5) -3px -3px 6px 1px inset;
+    border-radius: 50px;
+}
+
+.container{
+    text-align: center;
+    display: inline-block;
+}
+
+input::placeholder {
+    color: rgb(116, 10, 10); 
+}

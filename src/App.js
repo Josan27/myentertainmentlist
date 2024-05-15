@@ -7,8 +7,7 @@ import ErrorComponent from './components/rutas/ErrorComponent';
 import Home from './components/home/Home';
 import HomeList from './components/homelist/HomeList';
 import Profile from './components/profile/Profile'
-
-import ListAllHome from './components/list/list/ListAllHome';
+import ListAllHome from './components/list/alllist/ListAllHome';
 
 
 function App() {

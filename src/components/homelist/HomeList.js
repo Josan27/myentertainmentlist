@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../homelist/HomeList.css'
-import List5Home from '../list/list/List5Home';
+import List5Home from '../list/alllist/List5Home';
 import { Link } from 'react-router-dom';
 
 
