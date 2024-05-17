@@ -1,10 +1,16 @@
 import { createContext, useEffect, useState, useContext, useReducer } from "react";
 import axios from 'axios';
 
-const AuthContext = createContext();
+/*
+AuthProvider es un componente que proporciona un contexto de autenticación
+para gestionar el estado del usuario autenticado y sus acciones, 
+como el inicio de sesión, registro, y cierre de sesión.
+*/
 
-const authReducer = (state, action) => {
-  switch (action.type) {
+const AuthContext = createContext();  // Crea un nuevo contexto para la autenticación
+
+const authReducer = (state, action) => {  // Define el reducer para manejar las acciones de autenticación
+    switch (action.type) {
       case 'LOGIN_SUCCESS':
           return { ...state, isAuthenticated: true, user: action.payload.user, token: action.payload.token, loginError: null };
       case 'LOGIN_FAILED':
@@ -22,18 +28,18 @@ const authReducer = (state, action) => {
 
 export const AuthProvider = ({children}) => {
 
-  const initialState = {
+const initialState = {  // Define el estado inicial de la autenticación
     isAuthenticated: false,
     usu: null,
     token: null,
     loginError: null
 };
 
-const [state, dispatch] = useReducer(authReducer, initialState);
-const [loading, setLoading] = useState(true);
+const [state, dispatch] = useReducer(authReducer, initialState);  // Usa useReducer para manejar el estado de autenticación
+const [loading, setLoading] = useState(true);  // Estado de carga para verificar el token inicial
 
-useEffect(() => {
-  const token = localStorage.getItem('token');
+useEffect(() => {  // Efecto para verificar el token almacenado en el almacenamiento local al cargar el componente
+const token = localStorage.getItem('token');
   if (token) {
       const user = JSON.parse(localStorage.getItem('user'));
       dispatch({ type: 'LOGIN_SUCCESS', payload: { user, token } });
@@ -41,8 +47,8 @@ useEffect(() => {
   setLoading(false);
 }, []);
 
-const login = async (email, password) => {
-  try {
+const login = async (email, password) => {  // Función para iniciar sesión
+    try {
       const response = await axios.post('http://localhost:3000/login', { email, password });
       console.log(response.data);
       const { accessToken, user } = response.data;
@@ -55,7 +61,7 @@ const login = async (email, password) => {
   }
 };
 
-const register = async (email, password, username) => {
+const register = async (email, password, username) => {  // Función para registrar un nuevo usuario
     try {
       let films = [], tvshow = [], anime = [], img = "/img/user.png"
         const response = await axios.post('http://localhost:3000/register', { email, password, username, img, permissions: 0, myList: { films, tvshow, anime}});
@@ -68,17 +74,17 @@ const register = async (email, password, username) => {
     }
   };
 
-const logout = () => {
+const logout = () => {  // Función para cerrar sesión
     localStorage.removeItem('token');
     localStorage.removeItem('usu');
     dispatch({ type: 'LOGOUT' });
 };
 
-const getToken = () => {
+const getToken = () => {  // Función para obtener el token de autenticación
     return state.token;
 };
 
-const [filmsAll, setFilmsAll] = useState([]);
+const [filmsAll, setFilmsAll] = useState([]);  // Estado y funciones para manejar diferentes tipos de listas de películas, programas de TV y anime
 const [filmsNote, setFilmsNote] = useState([]);
 const [filmsNext, setFilmsNext] = useState([]);
 const [tvshowAll, setTvshowAll] = useState([]);
@@ -99,4 +105,4 @@ const [animeNext, setAnimeNext] = useState([]);
     );
 }
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext);  // Hook personalizado para usar el contexto de autenticación

@@ -3,13 +3,19 @@ import '../homelist/HomeList.css'
 import List5Home from '../list/alllist/List5Home';
 import { Link } from 'react-router-dom';
 
+/*
+El componente HomeList muestra las listas de películas, series y anime. 
+Permite alternar la visibilidad de las listas 
+y proporciona enlaces a más detalles sobre cada tipo de contenido.
+*/
 
 const HomeList = () => {
   const [filmsVisible, setfilmsVisible] = useState(false);
   const [tvshowVisible, settvshowVisible] = useState(false);
   const [animeVisible, setanimeVisible] = useState(false);
 
-  const togglefilmsVisibility = () => {
+  // Funciones para alternar la visibilidad de cada sección.
+  const togglefilmsVisibility = () => { 
     setfilmsVisible(!filmsVisible);
   };
   const toggletvshowVisibility = () => {

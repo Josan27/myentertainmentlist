@@ -2,8 +2,13 @@ import React from 'react';
 import { useAuth } from '../contexto/AuthProvider';
 import './Profile.css';
 
+/*
+El componente Profile muestra la 
+información del perfil del usuario autenticado.
+*/
+
 function Profile() {
-    const { state } = useAuth();
+    const { state } = useAuth();  // Obtiene el estado de autenticación del contexto
 
     return (
         <div className="perfil-container">

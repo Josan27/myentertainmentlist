@@ -4,12 +4,18 @@ import './Home.css';
 import React from 'react';
 import PopoverMenu from '../menuUser/PopoverMenu ';
 
+/*
+El componente Home es la página principal de la aplicación que 
+incluye un encabezado, un área de contenido principal y un pie de página. 
+Maneja la navegación y el cierre de sesión del usuario.
+*/
+
 function Home() {
-  const { logout } = useAuth();
+  const { logout } = useAuth();  // Obtiene la función de cierre de sesión del contexto de autenticación
 
   const handleLogout = (e) => {
-    e.preventDefault(); // Evita que Link redireccione, lo hará la protección de ruta.
-    logout();
+    e.preventDefault();  // Evita que el enlace redirija
+    logout();  // Llama a la función de cierre de sesión
   };
 
   return (

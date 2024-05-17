@@ -8,14 +8,19 @@ import Home from './components/home/Home';
 import HomeList from './components/homelist/HomeList';
 import Profile from './components/profile/Profile'
 import ListAllHome from './components/list/alllist/ListAllHome';
+import SearchUsers from './components/searchUsers/SearchUsers';
+import ListaPersonal from './components/personalList/ListaPersonal';
 
+/*
+Componente principal que define las rutas 
+de la aplicación utilizando react-router-dom.
+*/
 
 function App() {
 
   return (
-    <BrowserRouter>
-      
-      <Routes>
+    <BrowserRouter>  {/* Envuelve la aplicación en BrowserRouter para manejar la navegación */}
+      <Routes>  {/* Define las rutas de la aplicación */}
         <Route path="/login" element={<LoginForm/>}/>
         <Route path="/registro" element={<RegisterForm/>}/>
         <Route path="/" exact element={<PrivateRoute><Home/></PrivateRoute>}>
@@ -29,6 +34,8 @@ function App() {
           <Route path="/tvshownextall/:type" element={<PrivateRoute><ListAllHome/></PrivateRoute>} />
           <Route path="/animenextall/:type" element={<PrivateRoute><ListAllHome/></PrivateRoute>} />
           <Route path="/profile" element={<PrivateRoute><Profile/></PrivateRoute>} />
+          <Route path="/searchusers" element={<PrivateRoute><SearchUsers/></PrivateRoute>} />
+          <Route path="/listapersonal/*" element={<PrivateRoute><ListaPersonal/></PrivateRoute>} />
           <Route path="/homelist" element={<PrivateRoute><HomeList/></PrivateRoute>} />
           <Route path="/nosotros" element={<PrivateRoute><Nosotros/></PrivateRoute>} />
           <Route path="*" element={<ErrorComponent/>} />
@@ -38,4 +45,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // Exporta el componente App 

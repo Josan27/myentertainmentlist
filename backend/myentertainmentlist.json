@@ -25,6 +25,19 @@
         "anime": []
       },
       "id": 2
+    },
+    {
+      "email": "andres@gmail.com",
+      "password": "$2a$10$h1USQN/7TvLiP1.3RLVBd.xMbeyB0u43PvhXahgwtCY3bi3.NhuNO",
+      "username": "Andres",
+      "img": "/img/user.png",
+      "permissions": 0,
+      "myList": {
+        "films": [],
+        "tvshow": [],
+        "anime": []
+      },
+      "id": 3
     }
   ],
   "films": [
