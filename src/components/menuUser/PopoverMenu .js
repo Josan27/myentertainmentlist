@@ -9,12 +9,12 @@ import { useAuth } from '../contexto/AuthProvider';
 /*
 El componente PopoverMenu muestra un menú emergente con opciones de 
 navegación y acciones para el usuario. Utiliza 
-PrimeReact para la funcionalidad del menú y la notificación de tostadas.
+PrimeReact para la funcionalidad del menú y la notificación de toast.
 */
 
 export default function PopoverMenu() {
     const menuLeft = useRef(null);  // Referencia al menú
-    const toast = useRef(null);  // Referencia a la tostada
+    const toast = useRef(null);  // Referencia a la toast
     const navigate = useNavigate();  // Hook para navegación programática
     const { state } = useAuth(); // Obtener el estado de autenticación
     const userId = state.user?.id; // Obtener la ID del usuario desde el estado

@@ -135,6 +135,26 @@ export const getAnimeMore5 = async () => {
     return animesOrdenados.slice(0, 5); 
 }
 
+export const deleteFilm = async (id) => {
+    const response = await fetch(`http://localhost:3000/films/${id}`, {
+      method: 'DELETE'
+    });
+    return response;
+  };
+  
+  export const deleteAnime = async (id) => {
+    const response = await fetch(`http://localhost:3000/anime/${id}`, {
+      method: 'DELETE'
+    });
+    return response;
+  };
+  
+  export const deleteTvShow = async (id) => {
+    const response = await fetch(`http://localhost:3000/tvshow/${id}`, {
+      method: 'DELETE'
+    });
+    return response;
+  };
   
 /*
   export const postFilm = async (film) => {
@@ -156,16 +176,4 @@ export const getAnimeMore5 = async () => {
     }
 }
 
-
-export const deleteFilm = async (film) => {
-    const response = await fetch("http://localhost:3000/myentertainmentlist/" + film.id, {
-        method: "DELETE"
-    });
-    
-    if (response.status === 200) {
-        return {error: false}
-    } else {
-        return {error: true, data: "No se ha podido borrar la pelicula"};
-    }
-}
 */

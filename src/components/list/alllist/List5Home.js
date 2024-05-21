@@ -13,6 +13,7 @@ const List5Home = ({ type }) => {
   const { setFilmsAll, setFilmsNext, setFilmsNote, setAnimeNext, setAnimeAll, setAnimeNote, setTvshowNext, setTvshowAll, setTvshowNote} = useAuth();
   const [listData, setListData] = useState([]);
 
+  // Recupera los datos de la API basándose en el tipo especificado
   const fetchData = async () => {
     let listData;
     if (type === 'nextfilms') {
@@ -54,9 +55,10 @@ const List5Home = ({ type }) => {
     setListData(listData);
   };
 
+  // Llama a fetchData cuando el tipo cambia
   useEffect(() => {
     fetchData();
-  }, [type]);
+  }, [type]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className='results'>

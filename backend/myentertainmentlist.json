@@ -5,7 +5,7 @@
       "password": "$2a$10$xg3p425/VlIiA0qbeheKvet8o.2wfbvHmT.jH6Zf2jbQ6lel8q2FC",
       "username": "Jose Andres",
       "img": "/img/user.png",
-      "permissions": 0,
+      "permissions": 1,
       "myList": {
         "films": [],
         "tvshow": [],
