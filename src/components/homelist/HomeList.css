@@ -82,3 +82,15 @@ p{
   text-decoration: underline;
   font-weight: bold;
 }
+
+.button{
+  text-decoration: none; 
+  color: inherit; 
+  cursor: pointer; 
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}

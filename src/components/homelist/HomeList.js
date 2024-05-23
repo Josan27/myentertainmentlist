@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../homelist/HomeList.css'
 import List5Home from '../list/alllist/List5Home';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../contexto/AuthProvider';
 
 /*
 El componente HomeList muestra las listas de películas, series y anime. 
@@ -10,6 +11,7 @@ y proporciona enlaces a más detalles sobre cada tipo de contenido.
 */
 
 const HomeList = () => {
+  const { state } = useAuth();
   const [filmsVisible, setfilmsVisible] = useState(false);
   const [tvshowVisible, settvshowVisible] = useState(false);
   const [animeVisible, setanimeVisible] = useState(false);
@@ -34,6 +36,13 @@ const HomeList = () => {
             <div className='allContent'><Link to={`/filmslistall/somefilms`} className='link'><p className='pahover'>Algunos de ellos:</p></Link><List5Home type="somefilms"></List5Home></div>
             <div className='popularContent'><Link to={`/filmsnoteall/notefilms`} className='link'><p className='pahover'>Mejores calificados:</p></Link><List5Home type="notefilms"></List5Home></div>
             <div className='nextContent'><Link to={`/filmsnextall/nextfilms`} className='link'><p className='pahover'>Proximamente:</p></Link><List5Home type="nextfilms"></List5Home></div>
+            {state.user && state.user.permissions === 1 && (
+              <div className='button-container'>
+                <Link to={`/additem/pelicula`} className='button'>
+                  Agregar Pelicula
+                </Link>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -44,6 +53,13 @@ const HomeList = () => {
             <div className='allContent'><Link to={`/tvshowlistall/sometvshow`} className='link'><p className='pahover'>Algunos de ellos:</p></Link><List5Home type="sometvshow"></List5Home></div>
             <div className='popularContent'><Link to={`/tvshownoteall/notetvshow`} className='link'><p className='pahover'>Mejores calificados:</p></Link><List5Home type="notetvshow"></List5Home></div>
             <div className='nextContent'><Link to={`/tvshownextall/nexttvshow`} className='link'><p className='pahover'>Proximamente:</p></Link><List5Home type="nexttvshow"></List5Home></div>
+            {state.user && state.user.permissions === 1 && (
+              <div className='button-container'>
+                <Link to={`/additem/serie`} className='button'>
+                  Agregar Serie
+                </Link>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -54,6 +70,13 @@ const HomeList = () => {
             <div className='allContent'><Link to={`/animelistall/someanime`} className='link'><p className='pahover'>Algunos de ellos:</p></Link><List5Home type="someanime"></List5Home></div>
             <div className='popularContent'><Link to={`/animenoteall/noteanime`} className='link'><p className='pahover'>Mejores calificados:</p></Link><List5Home type="noteanime"></List5Home></div>
             <div className='nextContent'><Link to={`/animenextall/nextanime`} className='link'><p className='pahover'>Proximamente:</p></Link><List5Home type="nextanime"></List5Home></div>
+            {state.user && state.user.permissions === 1 && (
+              <div className='button-container'>
+                <Link to={`/additem/anime`} className='button'>
+                  Agregar Anime
+                </Link>
+              </div>
+            )}
           </div>
         )}
       </div>

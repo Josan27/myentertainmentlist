@@ -156,12 +156,11 @@ export const deleteFilm = async (id) => {
     return response;
   };
   
-/*
   export const postFilm = async (film) => {
     try {
         const response = await fetch("http://localhost:3000/films", {
             method: 'POST',
-            headers: { 'Content-type': 'application/json' },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(film)
         });
 
@@ -170,10 +169,46 @@ export const deleteFilm = async (id) => {
             return { error: false, data };
         }
 
-        return { error: true, data: "No se ha podido guardar la pelicula" };
+        return { error: true, data: "No se ha podido guardar la película" };
     } catch (error) {
         return { error: true, data: "Error al procesar la solicitud POST" };
     }
-}
+};
 
-*/
+export const postTvshow = async (tvshow) => {
+    try {
+        const response = await fetch("http://localhost:3000/tvshow", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(tvshow)
+        });
+
+        if (response.status === 201) {
+            const data = await response.json();
+            return { error: false, data };
+        }
+
+        return { error: true, data: "No se ha podido guardar la serie" };
+    } catch (error) {
+        return { error: true, data: "Error al procesar la solicitud POST" };
+    }
+};
+
+export const postAnime = async (anime) => {
+    try {
+        const response = await fetch("http://localhost:3000/anime", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(anime)
+        });
+
+        if (response.status === 201) {
+            const data = await response.json();
+            return { error: false, data };
+        }
+
+        return { error: true, data: "No se ha podido guardar el anime" };
+    } catch (error) {
+        return { error: true, data: "Error al procesar la solicitud POST" };
+    }
+};

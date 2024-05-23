@@ -10,6 +10,7 @@ import Profile from './components/profile/Profile'
 import ListAllHome from './components/list/alllist/ListAllHome';
 import SearchUsers from './components/searchUsers/SearchUsers';
 import ListaPersonal from './components/personalList/ListaPersonal';
+import AddElement from './components/addElements/AddElements';
 
 /*
 Componente principal que define las rutas 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/animenextall/:type" element={<PrivateRoute><ListAllHome/></PrivateRoute>} />
           <Route path="/profile" element={<PrivateRoute><Profile/></PrivateRoute>} />
           <Route path="/searchusers" element={<PrivateRoute><SearchUsers/></PrivateRoute>} />
+          <Route path="/additem/:type" element={<AddElement/>} />
           <Route path="/listapersonal/*" element={<PrivateRoute><ListaPersonal/></PrivateRoute>} />
           <Route path="/homelist" element={<PrivateRoute><HomeList/></PrivateRoute>} />
           <Route path="/nosotros" element={<PrivateRoute><Nosotros/></PrivateRoute>} />
