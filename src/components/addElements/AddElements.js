@@ -114,113 +114,115 @@ const AddElement = () => {
     };
 
     return (
-        <form className="add-item-form" onSubmit={handleSubmit}>
-            <div>
-                <label>Título Original:</label>
-                <input
-                    type="text"
-                    name="titulo_original"
-                    value={item.titulo_original}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Título en Español:</label>
-                <input
-                    type="text"
-                    name="titulo_español"
-                    value={item.titulo_español}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Cartelera:</label>
-                <input
-                    type="text"
-                    name="cartelera"
-                    value={item.cartelera}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label>Año:</label>
-                <input type="number" name="año" value={item.año} onChange={handleChange} />
-            </div>
-            <div>
-                <label>Estado:</label>
-                <select name="estado" value={item.estado} onChange={handleChange}>
-                    <option value="disponible">Disponible</option>
-                    <option value="proximamente">Próximamente</option>
-                </select>
-            </div>
-            {type === 'pelicula' && (
-                <>
+        <div className="add-item-form-container">
+            <form className="add-item-form" onSubmit={handleSubmit}>
                 <div>
-                    <label>Director:</label>
+                    <label>Título Original:</label>
                     <input
                         type="text"
-                        name="director"
-                        value={item.director}
+                        name="titulo_original"
+                        value={item.titulo_original}
                         onChange={handleChange}
-                        disabled={item.estado === 'proximamente'}
                     />
                 </div>
                 <div>
-                    <label>Duración:</label>
+                    <label>Título en Español:</label>
                     <input
                         type="text"
-                        name="duracion"
-                        value={item.duracion}
+                        name="titulo_español"
+                        value={item.titulo_español}
                         onChange={handleChange}
-                        disabled={item.estado === 'proximamente'}
                     />
                 </div>
-                </>
-            )}
-            {(type === 'serie' || type === 'anime') && (
-                <>
+                <div>
+                    <label>Cartelera:</label>
+                    <input
+                        type="text"
+                        name="cartelera"
+                        value={item.cartelera}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Año:</label>
+                    <input type="number" name="año" value={item.año} onChange={handleChange} />
+                </div>
+                <div>
+                    <label>Estado:</label>
+                    <select name="estado" value={item.estado} onChange={handleChange}>
+                        <option value="disponible">Disponible</option>
+                        <option value="proximamente">Próximamente</option>
+                    </select>
+                </div>
+                {type === 'pelicula' && (
+                    <>
                     <div>
-                        <label>Productora:</label>
+                        <label>Director:</label>
                         <input
                             type="text"
-                            name="productora"
-                            value={item.productora}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label>Temporadas:</label>
-                        <input
-                            type="number"
-                            name="temporadas"
-                            value={item.temporadas}
+                            name="director"
+                            value={item.director}
                             onChange={handleChange}
                             disabled={item.estado === 'proximamente'}
                         />
                     </div>
                     <div>
-                        <label>Capítulos:</label>
+                        <label>Duración:</label>
                         <input
-                            type="number"
-                            name="capitulos"
-                            value={item.capitulos}
+                            type="text"
+                            name="duracion"
+                            value={item.duracion}
                             onChange={handleChange}
                             disabled={item.estado === 'proximamente'}
                         />
                     </div>
-                </>
-            )}
-            <div>
-                <label>Descripción:</label>
-                <textarea
-                    name="descripcion"
-                    value={item.descripcion}
-                    onChange={handleChange}
-                ></textarea>
-            </div>
-            <button type="submit">Agregar</button>
-            {message && <p>{message}</p>}
-        </form>
+                    </>
+                )}
+                {(type === 'serie' || type === 'anime') && (
+                    <>
+                        <div>
+                            <label>Productora:</label>
+                            <input
+                                type="text"
+                                name="productora"
+                                value={item.productora}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <label>Temporadas:</label>
+                            <input
+                                type="number"
+                                name="temporadas"
+                                value={item.temporadas}
+                                onChange={handleChange}
+                                disabled={item.estado === 'proximamente'}
+                            />
+                        </div>
+                        <div>
+                            <label>Capítulos:</label>
+                            <input
+                                type="number"
+                                name="capitulos"
+                                value={item.capitulos}
+                                onChange={handleChange}
+                                disabled={item.estado === 'proximamente'}
+                            />
+                        </div>
+                    </>
+                )}
+                <div>
+                    <label>Descripción:</label>
+                    <textarea
+                        name="descripcion"
+                        value={item.descripcion}
+                        onChange={handleChange}
+                    ></textarea>
+                </div>
+                <button type="submit">Agregar</button>
+                {message && <p>{message}</p>}
+            </form>
+        </div>
     );
 };
 

@@ -1,23 +1,24 @@
 .add-item-form-container {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
+  justify-content: center; 
+  align-items: center;
 }
 .add-item-form {
-  margin-left: 35%;
-  margin-top: 10%;
-  background-color: #4e4e4e; 
+  background-color: #4e4e4e;
+  padding: 20px; 
   max-width: 500px; 
   width: 100%; 
-  border-radius: 50px;
+  border-radius: 50px; 
   box-shadow: rgba(116, 10, 10, 0.4) 5px 5px, rgba(116, 10, 10, 0.3) 10px 10px, rgba(116, 10, 10, 0.2) 15px 15px, rgba(116, 10, 10, 0.1) 20px 20px, rgba(116, 10, 10, 0.05) 25px 25px;
-  color: rgb(116, 10, 10);
+  color: rgb(116, 10, 10); 
   font-weight: bold; 
 }
-  
-
-  
-
-
-
-  
+.add-item-form input,
+.add-item-form textarea,
+.add-item-form select  {
+  width: 100%; 
+  border: none; 
+  border-radius: 4px;
+  margin-bottom: 10px; 
+  padding: 5px;
+} 
