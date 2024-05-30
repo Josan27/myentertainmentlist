@@ -212,3 +212,37 @@ export const postAnime = async (anime) => {
         return { error: true, data: "Error al procesar la solicitud POST" };
     }
 };
+
+export const getUserById = async (userId) => {
+    const response = await fetch(`http://localhost:3000/users/${userId}`);
+    return await response.json();
+};
+
+export const updateUser = async (userId, updatedUser) => {
+    const response = await fetch(`http://localhost:3000/users/${userId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedUser)
+    });
+    return response;
+};
+
+export const addToUserList = async (userId, itemType, newItem) => {
+    try {
+        const user = await getUserById(userId);
+        if (!user) {
+            return { error: true, data: "Usuario no encontrado" };
+        }
+        if (!['films', 'tvshow', 'anime'].includes(itemType)) {
+            return { error: true, data: "Tipo de elemento no válido" };
+        }
+        user.myList[itemType].push(newItem);
+        const response = await updateUser(userId, user);
+        if (response.ok) {
+            return { error: false, data: "Elemento agregado a la lista personal del usuario" };
+        }
+        return { error: true, data: "No se ha podido agregar el elemento a la lista personal del usuario" };
+    } catch (error) {
+        return { error: true, data: "Error al procesar la solicitud" };
+    }
+};
