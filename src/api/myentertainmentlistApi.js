@@ -238,6 +238,7 @@ export const addToUserList = async (userId, itemType, newItem) => {
         }
         user.myList[itemType].push(newItem);
         const response = await updateUser(userId, user);
+        console.log(response);
         if (response.ok) {
             return { error: false, data: "Elemento agregado a la lista personal del usuario" };
         }
@@ -245,4 +246,10 @@ export const addToUserList = async (userId, itemType, newItem) => {
     } catch (error) {
         return { error: true, data: "Error al procesar la solicitud" };
     }
+};
+
+export const getUserList = async (userId) => {
+    const response = await fetch(`http://localhost:3000/users/${userId}`);
+    const user = await response.json();
+    return user.myList;
 };

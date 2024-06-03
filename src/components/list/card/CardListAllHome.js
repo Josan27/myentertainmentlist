@@ -1,20 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './CardListAllHome.css';
 import ModalComponent from '../../modalAddList/ModalAddList'; 
 import { useAuth } from '../../contexto/AuthProvider';
-import { addToUserList } from '../../../api/myentertainmentlistApi'; 
+import { addToUserList, getUserList } from '../../../api/myentertainmentlistApi'; 
 
 const CardsListAllHome = ({ list, type, onDelete }) => {
   const { state } = useAuth();
   const [showModal, setShowModal] = useState(false);
+  const [isInUserList, setIsInUserList] = useState(false);
+
   let getType = type;
-  if(getType.includes("films")){
-    getType = "films"    
-  }else if(getType.includes("tvshow")){
-    getType = "tvshow"    
-  }else if(getType.includes("anime")){
-    getType = "anime"
+  if (getType.includes("films")) {
+    getType = "films";    
+  } else if (getType.includes("tvshow")) {
+    getType = "tvshow";    
+  } else if (getType.includes("anime")) {
+    getType = "anime";
   }
+
+  useEffect(() => {
+    const checkIfInUserList = async () => {
+      const userId = state.user.id;
+      const userList = await getUserList(userId);
+      const userItems = userList[getType] || [];
+
+      // Comprobar si el elemento ya está en la lista
+      const foundItem = userItems.some(item => item.id === list.id);
+      setIsInUserList(foundItem);
+    };
+
+    checkIfInUserList();
+  }, [state.user.id, getType, list.id]);
 
   const handleAddToMyList = () => {
     setShowModal(true);
@@ -26,6 +42,7 @@ const CardsListAllHome = ({ list, type, onDelete }) => {
 
     if (!response.error) {
       console.log('Elemento agregado a la lista personal del usuario');
+      setIsInUserList(true);
     } else {
       console.error('Error al agregar elemento a la lista personal del usuario:', response.data);
     }
@@ -47,7 +64,9 @@ const CardsListAllHome = ({ list, type, onDelete }) => {
       {list.capitulos > 0 && <p>Capitulos: {list.capitulos}</p>}
       <p>Calificacion: {list.calificacion}</p>
       <p className='description'>Descripcion: {list.descripcion}</p>
-      <button className="cardboton" onClick={handleAddToMyList}>Agregar a mi lista</button>
+      <button className="cardboton" onClick={handleAddToMyList} disabled={isInUserList}>
+        {isInUserList ? 'Ya en mi lista' : 'Agregar a mi lista'}
+      </button>
       {state.user?.permissions === 1 && (
         <>
           <button className="cardboton" onClick={() => onDelete(list.id, type)}>Eliminar</button>

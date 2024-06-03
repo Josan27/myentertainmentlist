@@ -2,46 +2,20 @@
   "users": [
     {
       "email": "joseandresgarridoguti@gmail.com",
-      "password": "$2a$10$ye2gO0dzQw08TgsjCWaZguLIta2L/cQ/VKC7lecv0tBAg83WDRDU2",
+      "password": "$2a$10$h1USQN/7TvLiP1.3RLVBd.xMbeyB0u43PvhXahgwtCY3bi3.NhuNO",
       "username": "Jose Andres",
       "img": "/img/user.png",
       "permissions": 1,
       "myList": {
-        "films": [
-          {
-            "id": 1,
-            "titulo_original": "The Shawshank Redemption",
-            "cartelera": "/img/films/sueniosdefuga.jpg",
-            "rating": 6,
-            "viewed": 1
-          }
-        ],
-        "tvshow": [
-          {
-            "id": 1,
-            "titulo_original": "Breaking Bad",
-            "cartelera": "/img/tvshow/breakingbad.jpg",
-            "rating": 8,
-            "seasonsWatched": 3,
-            "episodesWatched": 34
-          }
-        ],
-        "anime": [
-          {
-            "id": 11,
-            "titulo_original": "Solo leveling",
-            "cartelera": "/img/anime/leveling.jpg",
-            "rating": 0,
-            "seasonsWatched": 0,
-            "episodesWatched": 0
-          }
-        ]
+        "films": [],
+        "tvshow": [],
+        "anime": []
       },
       "id": 1
     },
     {
       "email": "jagarridogutierrez@gmail.com",
-      "password": "$2a$10$945vjeu62iQP56hmAJrUR.kY27YaqTyiuOp1fb/oDXE5pEQx6aux2",
+      "password": "$2a$10$h1USQN/7TvLiP1.3RLVBd.xMbeyB0u43PvhXahgwtCY3bi3.NhuNO",
       "username": "josean",
       "img": "/img/user.png",
       "permissions": 0,
