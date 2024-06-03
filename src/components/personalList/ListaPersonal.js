@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './ListaPersonal.css';
+import { getUserById } from '../../api/myentertainmentlistApi';
 
 const categories = ['Visto', 'Viendo', 'Por ver', 'Abandonado'];
 
@@ -22,14 +24,25 @@ const Section = ({ title, activeCategory, setActiveCategory }) => (
 );
 
 const ListaPersonal = () => {
+  const { userId } = useParams();
+  const [userName, setUserName] = useState('');
   const [activeSection, setActiveSection] = useState('Películas');
   const [activeCategory, setActiveCategory] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await getUserById(userId);
+      setUserName(user.username); 
+    };
+    fetchUser();
+  }, [userId]);
 
   const sections = ['Películas', 'Animes', 'Series'];
 
   return (
     <div className="personal-list-page">
       <h1>MYENTERTAINMENTLIST</h1>
+      <h2>Lista de {userName}</h2>
       <div className="section-select">
         {sections.map(section => (
           <button

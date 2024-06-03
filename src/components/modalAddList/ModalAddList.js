@@ -9,34 +9,36 @@ const ModalAllList = ({ show, onClose, onSave, item, type }) => {
   const [episodesWatched, setEpisodesWatched] = useState(0);
 
   let getType = type;
-  if(getType.includes("films")){
-    type= "films"
+  if (getType.includes("films")) {
+    type = "films"
   }
-  
+
   const handleSave = () => {
-
+    // Validar la calificación
     if (rating < 0 || rating > 10) {
-        return;
-      }
-  
-      // Validar las temporadas y capítulos
-      if (type !== 'films' && (seasonsWatched < 0 || episodesWatched < 0)) {
-        return;
-      }
-  
-      // Validar que las temporadas y los capítulos no superen el número total
-      if (type !== 'films' && (seasonsWatched > item.temporadas || episodesWatched > item.capitulos)) {
-        return;
-      }
+      return;
+    }
 
+    // Validar las temporadas y capítulos
+    if (type !== 'films' && (seasonsWatched < 0 || episodesWatched < 0)) {
+      return;
+    }
+
+    // Validar que las temporadas y los capítulos no superen el número total
+    if (type !== 'films' && (seasonsWatched > item.temporadas || episodesWatched > item.capitulos)) {
+      return;
+    }
+
+    // Crear el nuevo objeto para guardar en la lista personal del usuario
     const newItem = {
-      ...item,
-      viewed: type === 'films' ? (viewed ? 1 : 0) : undefined,
+      id: item.id,
+      titulo_original: item.titulo_original,
+      cartelera: item.cartelera,
       rating,
-      status,
-      seasonsWatched: type !== 'films' ? seasonsWatched : undefined,
-      episodesWatched: type !== 'films' ? episodesWatched : undefined,
+      ...(type === 'films' ? { viewed: viewed ? 1 : 0 } : {}),
+      ...(type !== 'films' ? { seasonsWatched, episodesWatched } : {}),
     };
+
     onSave(newItem);
   };
 
@@ -61,7 +63,7 @@ const ModalAllList = ({ show, onClose, onSave, item, type }) => {
             </label>
             <label>
               Calificación: (Entre 0 y 10) 
-              <input type="number" value={rating} min="1" max="10" onChange={(e) => setRating(e.target.value)} />
+              <input type="number" value={rating} min="0" max="10" onChange={(e) => setRating(parseInt(e.target.value))} />
             </label>
             <label>
               Estado:
@@ -87,7 +89,7 @@ const ModalAllList = ({ show, onClose, onSave, item, type }) => {
             </label>
             <label>
               Calificación: (Entre 0 y 10) 
-              <input type="number" value={rating} min="1" max="10" onChange={(e) => setRating(parseInt(e.target.value))} />
+              <input type="number" value={rating} min="0" max="10" onChange={(e) => setRating(parseInt(e.target.value))} />
             </label>
             <label>
               Estado:
