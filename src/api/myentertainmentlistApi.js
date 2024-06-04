@@ -219,10 +219,13 @@ export const getUserById = async (userId) => {
 };
 
 export const updateUser = async (userId, updatedUser) => {
+    // Excluir la contraseña del usuario actualizado
+    // Si no se excluye se envia la contraseña haseaha y se vuelve a hasear
+    const { password, ...userWithoutPassword } = updatedUser;
     const response = await fetch(`http://localhost:3000/users/${userId}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedUser)
+        body: JSON.stringify(userWithoutPassword) 
     });
     return response;
 };
