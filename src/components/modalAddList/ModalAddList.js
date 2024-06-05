@@ -4,7 +4,7 @@ import './ModalAddList.css';
 const ModalAllList = ({ show, onClose, onSave, item, type }) => {
   const [viewed, setViewed] = useState(false);
   const [rating, setRating] = useState(1);
-  const [status, setStatus] = useState("por ver");
+  const [status, setStatus] = useState("Por ver");
   const [seasonsWatched, setSeasonsWatched] = useState(0);
   const [episodesWatched, setEpisodesWatched] = useState(0);
 
@@ -35,6 +35,7 @@ const ModalAllList = ({ show, onClose, onSave, item, type }) => {
       titulo_original: item.titulo_original,
       cartelera: item.cartelera,
       rating,
+      status,
       ...(type === 'films' ? { viewed: viewed ? 1 : 0 } : {}),
       ...(type !== 'films' ? { seasonsWatched, episodesWatched } : {}),
     };
@@ -68,10 +69,10 @@ const ModalAllList = ({ show, onClose, onSave, item, type }) => {
             <label>
               Estado:
               <select value={status} onChange={(e) => setStatus(e.target.value)}>
-                <option value="visto">Visto</option>
-                <option value="por ver">Por ver</option>
-                <option value="abandonado">Abandonado</option>
-                <option value="viendo">Viendo</option>
+                <option value="Visto">Visto</option>
+                <option value="Por ver">Por ver</option>
+                <option value="Abandonado">Abandonado</option>
+                <option value="Viendo">Viendo</option>
               </select>
             </label>
           </>
@@ -94,10 +95,10 @@ const ModalAllList = ({ show, onClose, onSave, item, type }) => {
             <label>
               Estado:
               <select value={status} onChange={(e) => setStatus(e.target.value)}>
-                <option value="visto">Visto</option>
-                <option value="por ver">Por ver</option>
-                <option value="abandonado">Abandonado</option>
-                <option value="viendo">Viendo</option>
+                <option value="Visto">Visto</option>
+                <option value="Por ver">Por ver</option>
+                <option value="Abandonado">Abandonado</option>
+                <option value="Viendo">Viendo</option>
               </select>
             </label>
           </>

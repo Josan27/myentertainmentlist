@@ -7,9 +7,137 @@
       "img": "/img/user.png",
       "permissions": 1,
       "myList": {
-        "films": [],
-        "tvshow": [],
-        "anime": []
+        "films": [
+          {
+            "id": 2,
+            "titulo_original": "The Godfather",
+            "cartelera": "/img/films/elpadrino.jpg",
+            "rating": 0,
+            "status": "Por ver",
+            "viewed": 0
+          }
+        ],
+        "tvshow": [
+          {
+            "id": 7,
+            "titulo_original": "The Mandalorian",
+            "cartelera": "/img/tvshow/mandalorian.jpg",
+            "rating": 7,
+            "status": "Visto",
+            "seasonsWatched": 2,
+            "episodesWatched": 16
+          }
+        ],
+        "anime": [
+          {
+            "id": 4,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 401,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 402,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 403,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 404,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 405,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 406,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 407,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 408,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 409,
+            "titulo_original": "One Piece",
+            "cartelera": "/img/anime/onepiece.jpg",
+            "rating": 10,
+            "status": "Viendo",
+            "seasonsWatched": 1,
+            "episodesWatched": 850
+          },
+          {
+            "id": 1,
+            "titulo_original": "Attack on Titan",
+            "cartelera": "/img/anime/aot.jpg",
+            "rating": 10,
+            "status": "Visto",
+            "seasonsWatched": 6,
+            "episodesWatched": 75
+          },
+          {
+            "id": 3,
+            "titulo_original": "Death Note",
+            "cartelera": "/img/anime/deathnote.jpg",
+            "rating": 9,
+            "status": "Visto",
+            "seasonsWatched": 1,
+            "episodesWatched": 37
+          }
+        ]
       },
       "id": 1
     },
@@ -53,7 +181,8 @@
       "calificacion": 0,
       "contadorNotas": 0,
       "descripcion": "El banquero Andy Dufresne es arrestado por matar a su esposa y amante. Tras una dura adaptación, intenta mejorar las condiciones de la prisión y dar esperanza a sus compañeros"
-    },{
+    },
+    {
       "id": 2,
       "titulo_original": "The Godfather",
       "titulo_español": "El Padrino",
