@@ -256,3 +256,33 @@ export const getUserList = async (userId) => {
     const user = await response.json();
     return user.myList;
 };
+
+export const deleteItemFromUserList = async (userId, itemType, itemId) => {
+    console.log(userId, itemType, itemId)
+    try {
+      const user = await getUserById(userId);
+      if (!user) {
+        throw new Error('Usuario no encontrado');
+      }
+      if (!['films', 'tvshow', 'anime'].includes(itemType)) {
+        throw new Error('Tipo de elemento no válido');
+      }
+  
+      user.myList[itemType] = user.myList[itemType].filter(item => item.id !== itemId);
+  
+      const response = await fetch(`http://localhost:3000/users/${userId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(user)
+      });
+  
+      if (!response.ok) {
+        throw new Error('Error al actualizar la lista del usuario');
+      }
+  
+      return await response.json();
+    } catch (error) {
+      console.error('Error al eliminar el elemento de la lista del usuario:', error.message);
+      throw error;
+    }
+  };

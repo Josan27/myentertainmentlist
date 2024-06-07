@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ListaPersonal.css';
-import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne } from '../../api/myentertainmentlistApi';
+import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne, deleteItemFromUserList } from '../../api/myentertainmentlistApi';
 import ModalViewItem from '../modalShowElement/ModalShowElement';
 
 const categories = ['Visto', 'Viendo', 'Por ver', 'Abandonado'];
 
-const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick }) => (
+const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick, handleDeleteItem }) => (
   <div className="section">
     <h2>{title}</h2>
     <div className="categories">
@@ -42,8 +42,10 @@ const Section = ({ title, activeCategory, setActiveCategory, items, handleItemCl
               <p><strong>Episodios vistos:</strong> {item.episodesWatched}</p>
             )}
           </div>
-          <button className="item-button">Editar</button>
-          <button className="item-button">Borrar</button>
+          <div className="item-buttons">
+            <button className="item-button">Editar</button>
+            <button className="item-button" onClick={() => handleDeleteItem(item.id)}>Borrar</button>
+          </div>
         </div>
       ))}
     </div>
@@ -104,6 +106,35 @@ const ListaPersonal = () => {
     }
   };
 
+  const handleDeleteItem = async (itemId) => {
+    try {
+      let type = '';
+      switch (activeSection) {
+        case 'Películas':
+          type = 'films';
+          break;
+        case 'Series':
+          type = 'tvshow';
+          break;
+        case 'Animes':
+          type = 'anime';
+          break;
+        default:
+          return;
+      }
+
+      await deleteItemFromUserList(userId, type, itemId);
+
+      setUserList(prevList => {
+        const updatedList = { ...prevList };
+        updatedList[type] = updatedList[type].filter(item => item.id !== itemId);
+        return updatedList;
+      });
+    } catch (error) {
+      console.error('Error al eliminar el elemento:', error.message);
+    }
+  };
+
   const getItemsBySectionAndCategory = () => {
     let items = [];
     switch (activeSection) {
@@ -149,6 +180,7 @@ const ListaPersonal = () => {
           setActiveCategory={setActiveCategory}
           items={itemsToShow}
           handleItemClick={handleItemClick}
+          handleDeleteItem={handleDeleteItem}
         />
       ) : (
         <Section
@@ -157,6 +189,7 @@ const ListaPersonal = () => {
           setActiveCategory={setActiveCategory}
           items={[]}
           handleItemClick={handleItemClick}
+          handleDeleteItem={handleDeleteItem}
         />
       )}
       {showModal && itemDetails && (
