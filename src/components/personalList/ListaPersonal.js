@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ListaPersonal.css';
-import { getUserById, getUserList } from '../../api/myentertainmentlistApi';
+import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne } from '../../api/myentertainmentlistApi';
+import ModalViewItem from '../modalShowElement/ModalShowElement';
 
 const categories = ['Visto', 'Viendo', 'Por ver', 'Abandonado'];
 
-const Section = ({ title, activeCategory, setActiveCategory, items }) => (
+const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick }) => (
   <div className="section">
     <h2>{title}</h2>
     <div className="categories">
@@ -22,7 +23,12 @@ const Section = ({ title, activeCategory, setActiveCategory, items }) => (
     <div className="item-list">
       {items.map(item => (
         <div key={item.id} className="item">
-          <img src={item.cartelera} alt={item.titulo_original} className="item-img" />
+          <img 
+            src={item.cartelera} 
+            alt={item.titulo_original} 
+            className="item-img" 
+            onClick={() => handleItemClick(item)} 
+          />
           <div className="item-info">
             <p><strong>Título:</strong> {item.titulo_original}</p>
             <p><strong>Calificación:</strong> {item.rating}</p>
@@ -50,11 +56,14 @@ const ListaPersonal = () => {
   const [activeSection, setActiveSection] = useState('Películas');
   const [activeCategory, setActiveCategory] = useState(null);
   const [userList, setUserList] = useState({ films: [], tvshow: [], anime: [] });
+  const [showModal, setShowModal] = useState(false);
+  const [itemDetails, setItemDetails] = useState(null);
+  const [itemType, setItemType] = useState('');
 
   useEffect(() => {
     const fetchUser = async () => {
       const user = await getUserById(userId);
-      setUserName(user.username); 
+      setUserName(user.username);
     };
     fetchUser();
   }, [userId]);
@@ -66,6 +75,34 @@ const ListaPersonal = () => {
     };
     fetchUserList();
   }, [userId]);
+
+  const handleItemClick = async (item) => {
+    try {
+      let response;
+      let type = '';
+      switch (activeSection) {
+        case 'Películas':
+          response = await getFilmOne(item.id);
+          type = 'films';
+          break;
+        case 'Series':
+          response = await getTvshowOne(item.id);
+          type = 'tvshow';
+          break;
+        case 'Animes':
+          response = await getAnimeOne(item.id);
+          type = 'anime';
+          break;
+        default:
+          return;
+      }
+      setItemDetails(response);
+      setItemType(type);
+      setShowModal(true);
+    } catch (error) {
+      console.error('Error al obtener los detalles del elemento:', error.message);
+    }
+  };
 
   const getItemsBySectionAndCategory = () => {
     let items = [];
@@ -111,6 +148,7 @@ const ListaPersonal = () => {
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
           items={itemsToShow}
+          handleItemClick={handleItemClick}
         />
       ) : (
         <Section
@@ -118,6 +156,15 @@ const ListaPersonal = () => {
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
           items={[]}
+          handleItemClick={handleItemClick}
+        />
+      )}
+      {showModal && itemDetails && (
+        <ModalViewItem 
+          show={showModal} 
+          onClose={() => setShowModal(false)} 
+          item={itemDetails} 
+          type={itemType} 
         />
       )}
     </div>
