@@ -139,6 +139,9 @@ export const deleteFilm = async (id) => {
     const response = await fetch(`http://localhost:3000/films/${id}`, {
       method: 'DELETE'
     });
+    if (response.ok) {
+        await updateUserLists(id, 'films');
+    }
     return response;
   };
   
@@ -146,6 +149,9 @@ export const deleteFilm = async (id) => {
     const response = await fetch(`http://localhost:3000/anime/${id}`, {
       method: 'DELETE'
     });
+    if (response.ok) {
+        await updateUserLists(id, 'anime');
+    }
     return response;
   };
   
@@ -153,8 +159,34 @@ export const deleteFilm = async (id) => {
     const response = await fetch(`http://localhost:3000/tvshow/${id}`, {
       method: 'DELETE'
     });
+    if (response.ok) {
+        await updateUserLists(id, 'tvshow');
+    }
     return response;
   };
+
+  const updateUserLists = async (itemId, itemType) => {
+    const response = await fetch('http://localhost:3000/users');
+    const users = await response.json();
+
+    const updatedUsers = users.map(user => {
+        user.myList[itemType] = user.myList[itemType].filter(item => item.id !== itemId);
+
+        const { password, ...userWithoutPassword } = user;
+        return userWithoutPassword;
+    });
+
+    await Promise.all(updatedUsers.map(user =>
+        fetch(`http://localhost:3000/users/${user.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+    ));
+};
+
   
   export const postFilm = async (film) => {
     try {
