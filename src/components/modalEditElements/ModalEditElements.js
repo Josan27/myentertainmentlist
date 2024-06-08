@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './ModalEditElements.css';
+import { updateItemInUserList } from '../../api/myentertainmentlistApi';
 
-const ModalEditElements = ({ show, onClose, onSave, item, type, values }) => {
+const ModalEditElements = ({ show, onClose, onSave, item, type, values, userId }) => {
+  console.log(item);
+  console.log(values);
+
   const [viewed, setViewed] = useState(false);
   const [rating, setRating] = useState(1);
   const [status, setStatus] = useState("Por ver");
@@ -11,14 +15,14 @@ const ModalEditElements = ({ show, onClose, onSave, item, type, values }) => {
   useEffect(() => {
     if (values) {
       setViewed(values.viewed || false);
-      setRating(values.rating || 1);
+      setRating(values.rating || 0);
       setStatus(values.status || "Por ver");
       setSeasonsWatched(values.seasonsWatched || 0);
       setEpisodesWatched(values.episodesWatched || 0);
     }
   }, [values]);
 
-  const handleSave = () => {
+  const handleSave = async () => {
     // Validar la calificación
     if (rating < 0 || rating > 10) {
       return;
@@ -36,12 +40,19 @@ const ModalEditElements = ({ show, onClose, onSave, item, type, values }) => {
 
     // Crear el nuevo objeto para guardar en la lista personal del usuario
     const updatedItem = {
-      ...item,
+      ...values,
       rating,
       status,
       ...(type === 'films' ? { viewed: viewed ? 1 : 0 } : {}),
       ...(type !== 'films' ? { seasonsWatched, episodesWatched } : {}),
     };
+
+    // Llamar a la API para actualizar el ítem en el backend
+    const result = await updateItemInUserList(userId, type, updatedItem);
+    if (result.error) {
+      console.error(result.data);
+      return;
+    }
 
     onSave(updatedItem);
   };

@@ -287,23 +287,31 @@ export const deleteItemFromUserList = async (userId, itemType, itemId) => {
     }
   };
 
-  export const updateItemInUserList = async (userId, type, updatedItem) => {
+  export const updateItemInUserList = async (userId, itemType, updatedItem) => {
     try {
-      const response = await fetch(`https://tuapi.com/user/${userId}/${type}/${updatedItem.id}`, {
-        method: 'PUT', // Método HTTP para actualizar
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(updatedItem)
-      });
-  
-      if (!response.ok) {
-        throw new Error('Error al actualizar el elemento');
-      }
-  
-      return await response.json();
+        const user = await getUserById(userId);
+        if (!user) {
+            throw new Error("Usuario no encontrado");
+        }
+
+        if (!['films', 'tvshow', 'anime'].includes(itemType)) {
+            throw new Error("Tipo de elemento no válido");
+        }
+
+        const itemIndex = user.myList[itemType].findIndex(item => item.id === updatedItem.id);
+        if (itemIndex === -1) {
+            throw new Error("Elemento no encontrado en la lista del usuario");
+        }
+
+        user.myList[itemType][itemIndex] = updatedItem;
+
+        const response = await updateUser(userId, user);
+        if (!response.ok) {
+            throw new Error("Error al actualizar la lista del usuario");
+        }
+
+        return { error: false, data: "Elemento actualizado en la lista personal del usuario" };
     } catch (error) {
-      console.error('Error al actualizar el elemento:', error.message);
-      throw error;
+        return { error: true, data: error.message };
     }
-  };
+};

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ListaPersonal.css';
-import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne, deleteItemFromUserList } from '../../api/myentertainmentlistApi';
+import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne, deleteItemFromUserList, updateItemInUserList } from '../../api/myentertainmentlistApi';
 import ModalViewItem from '../modalShowElement/ModalShowElement';
 import ModalEditItem from '../modalEditElements/ModalEditElements';
 import { useAuth } from '../contexto/AuthProvider'; 
@@ -173,7 +173,7 @@ const ListaPersonal = () => {
     }
   };
 
-  const handleSaveEditedItem = (updatedItem) => {
+  const handleSaveEditedItem = async (updatedItem) => {
     let type = '';
     switch (activeSection) {
       case 'Películas':
@@ -189,14 +189,24 @@ const ListaPersonal = () => {
         return;
     }
 
-    setUserList(prevList => {
-      const updatedList = { ...prevList };
-      updatedList[type] = updatedList[type].map(item => item.id === updatedItem.id ? updatedItem : item);
-      return updatedList;
-    });
+    try {
+      const result = await updateItemInUserList(userId, type, updatedItem);
+      if (result.error) {
+        console.error(result.data);
+        return;
+      }
 
-    setShowEditModal(false);
-  };
+      setUserList(prevList => {
+        const updatedList = { ...prevList };
+        updatedList[type] = updatedList[type].map(item => item.id === updatedItem.id ? updatedItem : item);
+        return updatedList;
+      });
+
+      setShowEditModal(false);
+    } catch (error) {
+      console.error('Error al actualizar el elemento en la lista del usuario:', error.message);
+    }
+};
 
   const getItemsBySectionAndCategory = () => {
     let items = [];
@@ -277,6 +287,7 @@ const ListaPersonal = () => {
           item={editItem} 
           type={itemType} 
           values={editValues} 
+          userId={userId}
         />
       )}
     </div>

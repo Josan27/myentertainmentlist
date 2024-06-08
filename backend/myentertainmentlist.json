@@ -36,7 +36,7 @@
             "rating": 10,
             "status": "Viendo",
             "seasonsWatched": 1,
-            "episodesWatched": 850
+            "episodesWatched": 843
           },
           {
             "id": 401,
@@ -132,7 +132,7 @@
             "id": 3,
             "titulo_original": "Death Note",
             "cartelera": "/img/anime/deathnote.jpg",
-            "rating": 9,
+            "rating": 8,
             "status": "Visto",
             "seasonsWatched": 1,
             "episodesWatched": 37
