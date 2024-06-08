@@ -3,7 +3,7 @@ import './ModalAddList.css';
 
 const ModalAllList = ({ show, onClose, onSave, item, type }) => {
   const [viewed, setViewed] = useState(false);
-  const [rating, setRating] = useState(1);
+  const [rating, setRating] = useState(0);
   const [status, setStatus] = useState("Por ver");
   const [seasonsWatched, setSeasonsWatched] = useState(0);
   const [episodesWatched, setEpisodesWatched] = useState(0);

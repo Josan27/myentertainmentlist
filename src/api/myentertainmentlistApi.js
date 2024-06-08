@@ -258,9 +258,9 @@ export const getUserList = async (userId) => {
 };
 
 export const deleteItemFromUserList = async (userId, itemType, itemId) => {
-    console.log(userId, itemType, itemId)
     try {
-      const user = await getUserById(userId);
+      const userAll = await getUserById(userId);
+      const { password, ...user } = userAll;
       if (!user) {
         throw new Error('Usuario no encontrado');
       }

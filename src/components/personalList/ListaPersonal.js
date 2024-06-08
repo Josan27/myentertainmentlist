@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom';
 import './ListaPersonal.css';
 import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne, deleteItemFromUserList } from '../../api/myentertainmentlistApi';
 import ModalViewItem from '../modalShowElement/ModalShowElement';
-import ModalEditItem from '../modalEditElements/ModalEditElements'; 
+import ModalEditItem from '../modalEditElements/ModalEditElements';
+import { useAuth } from '../contexto/AuthProvider'; 
 
 const categories = ['Visto', 'Viendo', 'Por ver', 'Abandonado'];
 
-const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick, handleDeleteItem, handleEditItem }) => (
+const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick, handleDeleteItem, handleEditItem, isOwner }) => (
   <div className="section">
     <h2>{title}</h2>
     <div className="categories">
@@ -43,10 +44,12 @@ const Section = ({ title, activeCategory, setActiveCategory, items, handleItemCl
               <p><strong>Episodios vistos:</strong> {item.episodesWatched}</p>
             )}
           </div>
-          <div className="item-buttons">
-            <button className="item-button edit-button" onClick={() => handleEditItem(item)}>Editar</button>
-            <button className="item-button" onClick={() => handleDeleteItem(item.id)}>Borrar</button>
-          </div>
+          {isOwner && (
+            <div className="item-buttons">
+              <button className="item-button edit-button" onClick={() => handleEditItem(item)}>Editar</button>
+              <button className="item-button" onClick={() => handleDeleteItem(item.id)}>Borrar</button>
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -55,6 +58,8 @@ const Section = ({ title, activeCategory, setActiveCategory, items, handleItemCl
 
 const ListaPersonal = () => {
   const { userId } = useParams();
+  const { state } = useAuth();
+  const authenticatedUserId = state.user ? state.user.id : null;
   const [userName, setUserName] = useState('');
   const [activeSection, setActiveSection] = useState('Películas');
   const [activeCategory, setActiveCategory] = useState(null);
@@ -65,7 +70,6 @@ const ListaPersonal = () => {
   const [showEditModal, setShowEditModal] = useState(false); 
   const [editItem, setEditItem] = useState(null); 
   const [editValues, setEditValues] = useState(null); 
-
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -160,7 +164,7 @@ const ListaPersonal = () => {
         default:
           return;
       }
-      setEditValues(item)
+      setEditValues(item);
       setEditItem(response);
       setItemType(type);
       setShowEditModal(true);
@@ -168,7 +172,6 @@ const ListaPersonal = () => {
       console.error('Error al obtener los detalles del elemento:', error.message);
     }
   };
-  
 
   const handleSaveEditedItem = (updatedItem) => {
     let type = '';
@@ -215,6 +218,8 @@ const ListaPersonal = () => {
 
   const itemsToShow = activeCategory ? getItemsBySectionAndCategory() : [];
 
+  const isOwner = authenticatedUserId && parseInt(authenticatedUserId, 10) === parseInt(userId, 10);
+
   return (
     <div className="personal-list-page">
       <h1>MYENTERTAINMENTLIST</h1>
@@ -242,6 +247,7 @@ const ListaPersonal = () => {
           handleItemClick={handleItemClick}
           handleDeleteItem={handleDeleteItem}
           handleEditItem={handleEditItem}
+          isOwner={isOwner}
         />
       ) : (
         <Section
@@ -252,6 +258,7 @@ const ListaPersonal = () => {
           handleItemClick={handleItemClick}
           handleDeleteItem={handleDeleteItem}
           handleEditItem={handleEditItem}
+          isOwner={isOwner}
         />
       )}
       {showModal && itemDetails && (
