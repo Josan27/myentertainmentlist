@@ -286,3 +286,24 @@ export const deleteItemFromUserList = async (userId, itemType, itemId) => {
       throw error;
     }
   };
+
+  export const updateItemInUserList = async (userId, type, updatedItem) => {
+    try {
+      const response = await fetch(`https://tuapi.com/user/${userId}/${type}/${updatedItem.id}`, {
+        method: 'PUT', // Método HTTP para actualizar
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedItem)
+      });
+  
+      if (!response.ok) {
+        throw new Error('Error al actualizar el elemento');
+      }
+  
+      return await response.json();
+    } catch (error) {
+      console.error('Error al actualizar el elemento:', error.message);
+      throw error;
+    }
+  };

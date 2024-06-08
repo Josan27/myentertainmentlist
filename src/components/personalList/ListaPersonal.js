@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom';
 import './ListaPersonal.css';
 import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne, deleteItemFromUserList } from '../../api/myentertainmentlistApi';
 import ModalViewItem from '../modalShowElement/ModalShowElement';
+import ModalEditItem from '../modalEditElements/ModalEditElements'; 
 
 const categories = ['Visto', 'Viendo', 'Por ver', 'Abandonado'];
 
-const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick, handleDeleteItem }) => (
+const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick, handleDeleteItem, handleEditItem }) => (
   <div className="section">
     <h2>{title}</h2>
     <div className="categories">
@@ -43,7 +44,7 @@ const Section = ({ title, activeCategory, setActiveCategory, items, handleItemCl
             )}
           </div>
           <div className="item-buttons">
-            <button className="item-button">Editar</button>
+            <button className="item-button edit-button" onClick={() => handleEditItem(item)}>Editar</button>
             <button className="item-button" onClick={() => handleDeleteItem(item.id)}>Borrar</button>
           </div>
         </div>
@@ -61,6 +62,10 @@ const ListaPersonal = () => {
   const [showModal, setShowModal] = useState(false);
   const [itemDetails, setItemDetails] = useState(null);
   const [itemType, setItemType] = useState('');
+  const [showEditModal, setShowEditModal] = useState(false); 
+  const [editItem, setEditItem] = useState(null); 
+  const [editValues, setEditValues] = useState(null); 
+
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -135,6 +140,61 @@ const ListaPersonal = () => {
     }
   };
 
+  const handleEditItem = async (item) => {
+    try {
+      let response;
+      let type = '';
+      switch (activeSection) {
+        case 'Películas':
+          response = await getFilmOne(item.id);
+          type = 'films';
+          break;
+        case 'Series':
+          response = await getTvshowOne(item.id);
+          type = 'tvshow';
+          break;
+        case 'Animes':
+          response = await getAnimeOne(item.id);
+          type = 'anime';
+          break;
+        default:
+          return;
+      }
+      setEditValues(item)
+      setEditItem(response);
+      setItemType(type);
+      setShowEditModal(true);
+    } catch (error) {
+      console.error('Error al obtener los detalles del elemento:', error.message);
+    }
+  };
+  
+
+  const handleSaveEditedItem = (updatedItem) => {
+    let type = '';
+    switch (activeSection) {
+      case 'Películas':
+        type = 'films';
+        break;
+      case 'Series':
+        type = 'tvshow';
+        break;
+      case 'Animes':
+        type = 'anime';
+        break;
+      default:
+        return;
+    }
+
+    setUserList(prevList => {
+      const updatedList = { ...prevList };
+      updatedList[type] = updatedList[type].map(item => item.id === updatedItem.id ? updatedItem : item);
+      return updatedList;
+    });
+
+    setShowEditModal(false);
+  };
+
   const getItemsBySectionAndCategory = () => {
     let items = [];
     switch (activeSection) {
@@ -181,6 +241,7 @@ const ListaPersonal = () => {
           items={itemsToShow}
           handleItemClick={handleItemClick}
           handleDeleteItem={handleDeleteItem}
+          handleEditItem={handleEditItem}
         />
       ) : (
         <Section
@@ -190,6 +251,7 @@ const ListaPersonal = () => {
           items={[]}
           handleItemClick={handleItemClick}
           handleDeleteItem={handleDeleteItem}
+          handleEditItem={handleEditItem}
         />
       )}
       {showModal && itemDetails && (
@@ -197,7 +259,17 @@ const ListaPersonal = () => {
           show={showModal} 
           onClose={() => setShowModal(false)} 
           item={itemDetails} 
+          type={itemType}
+        />
+      )}
+      {showEditModal && editItem && (
+        <ModalEditItem 
+          show={showEditModal} 
+          onClose={() => setShowEditModal(false)} 
+          onSave={handleSaveEditedItem} 
+          item={editItem} 
           type={itemType} 
+          values={editValues} 
         />
       )}
     </div>
