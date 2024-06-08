@@ -273,8 +273,11 @@ export const addToUserList = async (userId, itemType, newItem) => {
         }
         user.myList[itemType].push(newItem);
         const response = await updateUser(userId, user);
-        console.log(response);
+
         if (response.ok) {
+            const users = await getAllUsers();
+            const averageRating = calculateAverageRating(newItem.id, itemType, users);
+            await updateItemRating(itemType, newItem.id, averageRating);
             return { error: false, data: "Elemento agregado a la lista personal del usuario" };
         }
         return { error: true, data: "No se ha podido agregar el elemento a la lista personal del usuario" };
@@ -336,14 +339,48 @@ export const deleteItemFromUserList = async (userId, itemType, itemId) => {
         }
 
         user.myList[itemType][itemIndex] = updatedItem;
-
         const response = await updateUser(userId, user);
-        if (!response.ok) {
-            throw new Error("Error al actualizar la lista del usuario");
-        }
 
-        return { error: false, data: "Elemento actualizado en la lista personal del usuario" };
+        if (response.ok) {
+            const users = await getAllUsers();
+            const averageRating = calculateAverageRating(updatedItem.id, itemType, users);
+            await updateItemRating(itemType, updatedItem.id, averageRating);
+            return { error: false, data: "Elemento actualizado en la lista personal del usuario" };
+        }
+        throw new Error("Error al actualizar la lista del usuario");
     } catch (error) {
         return { error: true, data: error.message };
     }
+};
+
+const calculateAverageRating = (itemId, itemType, users) => {
+    let totalRating = 0;
+    let ratingCount = 0;
+
+    users.forEach(user => {
+        user.myList[itemType].forEach(item => {
+            if (item.id === itemId && item.rating > 0) {
+                totalRating += item.rating;
+                ratingCount++;
+            }
+        });
+    });
+
+    return ratingCount > 0 ? totalRating / ratingCount : 0;
+};
+
+const getAllUsers = async () => {
+    const response = await fetch('http://localhost:3000/users');
+    return await response.json();
+};
+
+const updateItemRating = async (itemType, itemId, newRating) => {
+    const response = await fetch(`http://localhost:3000/${itemType}/${itemId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ calificacion: newRating })
+    });
+    return response;
 };

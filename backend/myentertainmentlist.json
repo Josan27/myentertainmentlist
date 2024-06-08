@@ -12,7 +12,7 @@
             "id": 2,
             "titulo_original": "The Godfather",
             "cartelera": "/img/films/elpadrino.jpg",
-            "rating": 0,
+            "rating": 1,
             "status": "Por ver",
             "viewed": 0
           }
@@ -155,7 +155,7 @@
             "id": 4,
             "titulo_original": "One Piece",
             "cartelera": "/img/anime/onepiece.jpg",
-            "rating": 10,
+            "rating": 8,
             "status": "Viendo",
             "seasonsWatched": 1,
             "episodesWatched": 850
@@ -201,7 +201,7 @@
       "director": "Francis Ford Coppola",
       "estado": "disponible",
       "duracion": "175 minutos",
-      "calificacion": 0,
+      "calificacion": 1,
       "contadorNotas": 0,
       "descripcion": "El Padrino narra la historia de un hombre, Vito Corleone, el capo más respetado de Nueva York. Déspota benevolente, implacable con sus rivales, inteligente y fiel a los principios del honor y la amistad."
     },
@@ -465,7 +465,7 @@
       "estado": "disponible",
       "temporadas": 2,
       "capitulos": 16,
-      "calificacion": 0,
+      "calificacion": 7,
       "contadorNotas": 0,
       "descripcion": "Ser cazarrecompensas es una profesión complicada. En el anárquico período tras el hundimiento del Imperio Galáctico, un cazarrecompensas con armadura conocido solo como El Mandaloriano emprende una misión bien remunerada aunque enigmática."
     },
@@ -588,7 +588,7 @@
       "estado": "disponible",
       "temporadas": 6,
       "capitulos": 75,
-      "calificacion": 0,
+      "calificacion": 10,
       "contadorNotas": 0,
       "descripcion": "La historia nos sitúa en un mundo donde la humanidad está al borde de la extinción debido a la existencia de unos seres humanoides gigantes conocidos como los Titanes."
     },
@@ -616,7 +616,7 @@
       "estado": "disponible",
       "temporadas": 1,
       "capitulos": 37,
-      "calificacion": 0,
+      "calificacion": 8,
       "contadorNotas": 0,
       "descripcion": "Un estudiante encuentra un cuaderno con el poder de matar a cualquier persona cuyo nombre sea escrito en él. Decide utilizarlo para purgar el mundo de los criminales."
     },
@@ -630,7 +630,7 @@
       "estado": "disponible",
       "temporadas": 1,
       "capitulos": 1100,
-      "calificacion": 0,
+      "calificacion": 9,
       "contadorNotas": 0,
       "descripcion": "Monkey D. Luffy parte en busca del legendario tesoro One Piece para convertirse en el Rey de los Piratas. En su aventura recluta a un variopinto grupo de piratas."
     },

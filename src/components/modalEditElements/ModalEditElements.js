@@ -3,8 +3,6 @@ import './ModalEditElements.css';
 import { updateItemInUserList } from '../../api/myentertainmentlistApi';
 
 const ModalEditElements = ({ show, onClose, onSave, item, type, values, userId }) => {
-  console.log(item);
-  console.log(values);
 
   const [viewed, setViewed] = useState(false);
   const [rating, setRating] = useState(1);
