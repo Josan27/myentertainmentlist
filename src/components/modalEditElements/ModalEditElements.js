@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './ModalEditElements.css';
 import { updateItemInUserList } from '../../api/myentertainmentlistApi';
 
 const ModalEditElements = ({ show, onClose, onSave, item, type, values, userId }) => {

@@ -1,14 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ListaPersonal.css';
-import { getUserById, getUserList, getFilmOne, getTvshowOne, getAnimeOne, deleteItemFromUserList, updateItemInUserList } from '../../api/myentertainmentlistApi';
+import {
+  getUserById,
+  getUserList,
+  getFilmOne,
+  getTvshowOne,
+  getAnimeOne,
+  deleteItemFromUserList,
+  updateItemInUserList
+} from '../../api/myentertainmentlistApi';
 import ModalViewItem from '../modalShowElement/ModalShowElement';
 import ModalEditItem from '../modalEditElements/ModalEditElements';
 import { useAuth } from '../contexto/AuthProvider'; 
 
 const categories = ['Visto', 'Viendo', 'Por ver', 'Abandonado'];
 
-const Section = ({ title, activeCategory, setActiveCategory, items, handleItemClick, handleDeleteItem, handleEditItem, isOwner }) => (
+// Subcomponente Section para mostrar secciones específicas
+const Section = ({
+  title,
+  activeCategory,
+  setActiveCategory,
+  items,
+  handleItemClick,
+  handleDeleteItem,
+  handleEditItem,
+  isOwner
+}) => (
   <div className="section">
     <h2>{title}</h2>
     <div className="categories">
@@ -56,21 +74,23 @@ const Section = ({ title, activeCategory, setActiveCategory, items, handleItemCl
   </div>
 );
 
+// Componente principal ListaPersonal
 const ListaPersonal = () => {
-  const { userId } = useParams();
-  const { state } = useAuth();
-  const authenticatedUserId = state.user ? state.user.id : null;
-  const [userName, setUserName] = useState('');
-  const [activeSection, setActiveSection] = useState('Películas');
-  const [activeCategory, setActiveCategory] = useState(null);
-  const [userList, setUserList] = useState({ films: [], tvshow: [], anime: [] });
-  const [showModal, setShowModal] = useState(false);
-  const [itemDetails, setItemDetails] = useState(null);
-  const [itemType, setItemType] = useState('');
-  const [showEditModal, setShowEditModal] = useState(false); 
-  const [editItem, setEditItem] = useState(null); 
-  const [editValues, setEditValues] = useState(null); 
+  const { userId } = useParams(); // Obtener userId de los parámetros de la URL
+  const { state } = useAuth(); // Obtener el estado de autenticación del contexto
+  const authenticatedUserId = state.user ? state.user.id : null; // Obtener el ID del usuario autenticado
+  const [userName, setUserName] = useState(''); // Estado para almacenar el nombre de usuario
+  const [activeSection, setActiveSection] = useState('Películas'); // Estado para la sección activa
+  const [activeCategory, setActiveCategory] = useState(null); // Estado para la categoría activa
+  const [userList, setUserList] = useState({ films: [], tvshow: [], anime: [] }); // Estado para la lista del usuario
+  const [showModal, setShowModal] = useState(false); // Estado para mostrar el modal de vista
+  const [itemDetails, setItemDetails] = useState(null); // Estado para los detalles del ítem seleccionado
+  const [itemType, setItemType] = useState(''); // Estado para el tipo de ítem seleccionado
+  const [showEditModal, setShowEditModal] = useState(false); // Estado para mostrar el modal de edición
+  const [editItem, setEditItem] = useState(null); // Estado para el ítem a editar
+  const [editValues, setEditValues] = useState(null); // Estado para los valores del ítem a editar
 
+  // Efecto para obtener los datos del usuario al montar el componente
   useEffect(() => {
     const fetchUser = async () => {
       const user = await getUserById(userId);
@@ -79,6 +99,7 @@ const ListaPersonal = () => {
     fetchUser();
   }, [userId]);
 
+  // Efecto para obtener la lista del usuario al montar el componente
   useEffect(() => {
     const fetchUserList = async () => {
       const list = await getUserList(userId);
@@ -87,6 +108,7 @@ const ListaPersonal = () => {
     fetchUserList();
   }, [userId]);
 
+  // Función para manejar el clic en un ítem y mostrar sus detalles en un modal
   const handleItemClick = async (item) => {
     try {
       let response;
@@ -115,6 +137,7 @@ const ListaPersonal = () => {
     }
   };
 
+  // Función para manejar la eliminación de un ítem de la lista del usuario
   const handleDeleteItem = async (itemId) => {
     try {
       let type = '';
@@ -144,6 +167,7 @@ const ListaPersonal = () => {
     }
   };
 
+  // Función para manejar la edición de un ítem de la lista del usuario
   const handleEditItem = async (item) => {
     try {
       let response;
@@ -173,6 +197,7 @@ const ListaPersonal = () => {
     }
   };
 
+  // Función para guardar los cambios realizados en un ítem editado
   const handleSaveEditedItem = async (updatedItem) => {
     let type = '';
     switch (activeSection) {
@@ -206,8 +231,9 @@ const ListaPersonal = () => {
     } catch (error) {
       console.error('Error al actualizar el elemento en la lista del usuario:', error.message);
     }
-};
+  };
 
+  // Función para filtrar los ítems por sección y categoría activa
   const getItemsBySectionAndCategory = () => {
     let items = [];
     switch (activeSection) {

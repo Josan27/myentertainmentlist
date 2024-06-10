@@ -1,5 +1,4 @@
 .principal{
-  
   width: auto;
   height: 100%;
   margin-top: 50px;
@@ -7,8 +6,8 @@
 }
 
 .films{
-    background-color: #4e4e4e;
-    margin-top: 20px;
+  background-color: #4e4e4e;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 200px;
   margin-right: 200px;
@@ -23,8 +22,8 @@
 }
 
 .tvshow{
-    background-color: #4e4e4e;
-    margin-top: 20px;
+  background-color: #4e4e4e;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 200px;
   margin-right: 200px;
@@ -39,8 +38,8 @@
 }
 
 .anime{
-    background-color: #4e4e4e;
-    margin-top: 20px;
+  background-color: #4e4e4e;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 200px;
   margin-right: 200px;
@@ -55,9 +54,9 @@
 }
 
 h2{
-    font-weight: bold;
-    text-align: center;
-    font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
 }
 
 p{

@@ -12,7 +12,7 @@
             "id": 2,
             "titulo_original": "The Godfather",
             "cartelera": "/img/films/elpadrino.jpg",
-            "rating": 0,
+            "rating": 1,
             "status": "Por ver",
             "viewed": 0
           }
@@ -155,7 +155,7 @@
             "id": 4,
             "titulo_original": "One Piece",
             "cartelera": "/img/anime/onepiece.jpg",
-            "rating": 10,
+            "rating": 8,
             "status": "Viendo",
             "seasonsWatched": 1,
             "episodesWatched": 850
@@ -189,7 +189,6 @@
       "estado": "disponible",
       "duracion": "142 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "El banquero Andy Dufresne es arrestado por matar a su esposa y amante. Tras una dura adaptación, intenta mejorar las condiciones de la prisión y dar esperanza a sus compañeros"
     },
     {
@@ -201,8 +200,7 @@
       "director": "Francis Ford Coppola",
       "estado": "disponible",
       "duracion": "175 minutos",
-      "calificacion": 0,
-      "contadorNotas": 0,
+      "calificacion": 1,
       "descripcion": "El Padrino narra la historia de un hombre, Vito Corleone, el capo más respetado de Nueva York. Déspota benevolente, implacable con sus rivales, inteligente y fiel a los principios del honor y la amistad."
     },
     {
@@ -215,7 +213,6 @@
       "estado": "disponible",
       "duracion": "152 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Con la ayuda del teniente Jim Gordon y del Fiscal del Distrito Harvey Dent, Batman mantiene a raya el crimen organizado en Gotham. Todo cambia cuando aparece el Joker, un nuevo criminal que desencadena el caos y tiene aterrados a los ciudadanos."
     },
     {
@@ -228,7 +225,6 @@
       "disponibilidad": "Ya disponible",
       "duracion": "132 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Tanto Gi Taek como su familia están sin trabajo. Cuando su hijo mayor, Gi Woo, empieza a recibir clases particulares en la adinerada casa de Park, las dos familias, que tienen mucho en común pese a pertenecer a dos mundos totalmente distintos, comienzan una relación de resultados imprevisibles."
     },
     {
@@ -241,7 +237,6 @@
       "estado": "disponible",
       "duracion": "142 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Sentado en un banco en Savannah, Georgia, Forrest Gump espera al autobús. Mientras éste tarda en llegar, el joven cuenta su vida a las personas que se sientan a esperar con él. Aunque sufre un pequeño retraso mental, esto no le impide hacer cosas maravillosas."
     },
     {
@@ -254,7 +249,6 @@
       "estado": "disponible",
       "duracion": "136 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "El programador informático Thomas Anderson, más conocido en el mundo de los hacker como Neo, está en el punto de mira del temible agente Smith. Otros dos piratas informáticos, Trinity y Morfeo, se ponen en contacto con Neo para ayudarlo a escapar. Matrix te posee. Sigue al conejo blanco."
     },
     {
@@ -267,7 +261,6 @@
       "disponibilidad": "Ya disponible",
       "duracion": "122 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "La pasión de Arthur Fleck, un hombre ignorado por la sociedad, es hacer reír a la gente. Sin embargo, una serie de trágicos sucesos harán que su visión del mundo se distorsione considerablemente convirtiéndolo en un brillante criminal."
     },
     {
@@ -280,7 +273,6 @@
       "estado": "disponible",
       "duracion": "148 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Dom Cobb es un ladrón capaz de adentrarse en los sueños de la gente y hacerse con sus secretos. Sin embargo, ahora tiene que llevar a cabo una misión diferente a lo que ha hecho siempre: realizar una incepción para implantar una idea en el subconsciente de una persona."
     },
     {
@@ -293,7 +285,6 @@
       "disponibilidad": "Ya disponible",
       "duracion": "181 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Después de los eventos devastadores de Avengers: Infinity War, el universo está en ruinas debido a las acciones de Thanos, el Titán Loco. Con la ayuda de los aliados que quedaron, los Vengadores deberán reunirse una vez más para intentar detenerlo y restaurar el orden en el universo de una vez por todas."
     },
     {
@@ -306,7 +297,6 @@
       "estado": "disponible",
       "duracion": "201 minutos",
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "La batalla por la Tierra Media ha empezado. Las fuerzas de Saruman han sido destruidas y por primera vez parece que hay una pequeña esperanza. Sin embargo, el poder de Sauron crece y su interés se centra en Gondor, el último reducto de los hombres, cuyo heredero es Aragorn."
     },
     {
@@ -382,7 +372,6 @@
       "temporadas": 5,
       "capitulos": 62,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Un profesor de química con cáncer terminal se asocia con un exalumno suyo para fabricar y vender metanfetamina a fin de que su familia no pase apuros económicos."
     },
     {
@@ -396,7 +385,6 @@
       "temporadas": 8,
       "capitulos": 73,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "La trama se sitúa en un mundo ficticio con elementos fantásticos, como dragones y poderes, pero también otros muy reales como son las luchas de poder, los enfrentamientos políticos, las traiciones y la continua guerra por el trono que gobierna los siete reinos de Poniente."
     },
     {
@@ -410,7 +398,6 @@
       "temporadas": 4,
       "capitulos": 34,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "A raíz de la desaparición de un niño, un pueblo desvela un misterio relacionado con experimentos secretos, fuerzas sobrenaturales aterradoras y una niña muy extraña."
     },
     {
@@ -424,7 +411,6 @@
       "temporadas": 9,
       "capitulos": 199,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "La serie THE OFFICE es una parodia de un documental real pero que es ficticio, sobre las travesuras de trabajo de 9 a 5 de los empleados de una sucursal de una compañía de papel con sede en Pennsylvania, donde no hay mucho trabajo real, pero que está llena de personajes coloridos."
     },
     {
@@ -438,7 +424,6 @@
       "temporadas": 5,
       "capitulos": 22,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Un videojuego transforma una larga amistad, una red social debe hacer frente a un secuestro y una adolescente intima con la versión virtual de su cantante favorita."
     },
     {
@@ -452,7 +437,6 @@
       "temporadas": 5,
       "capitulos": 48,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Ocho ladrones toman rehenes en la Fábrica Nacional de Moneda y Timbre de España, mientras el líder de la banda manipula a la policía para cumplir con su plan."
     },
     {
@@ -465,8 +449,7 @@
       "estado": "disponible",
       "temporadas": 2,
       "capitulos": 16,
-      "calificacion": 0,
-      "contadorNotas": 0,
+      "calificacion": 7,
       "descripcion": "Ser cazarrecompensas es una profesión complicada. En el anárquico período tras el hundimiento del Imperio Galáctico, un cazarrecompensas con armadura conocido solo como El Mandaloriano emprende una misión bien remunerada aunque enigmática."
     },
     {
@@ -480,7 +463,6 @@
       "temporadas": 5,
       "capitulos": 50,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "The Crown es una serie de televisión estadounidense/británica para emisión en streaming de drama histórico acerca del reinado de la reina Isabel II, creada y escrita principalmente por Peter Morgan, y producida por Left Bank Pictures y Sony Pictures Television para Netflix."
     },
     {
@@ -494,7 +476,6 @@
       "temporadas": 10,
       "capitulos": 236,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Esta comedia televisiva sigue las aventuras y desventuras en el trabajo, el amor y la vida de seis amigos veinteañeros que viven en Manhattan durante los noventa."
     },
     {
@@ -508,7 +489,6 @@
       "temporadas": 4,
       "capitulos": 12,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Ubicada en el Londres del siglo XXI, la serie sigue los pasos del excéntrico detective Sherlock Holmes junto a su compañero el doctor John H. Watson, en su búsqueda por resolver los brutales crímenes que se van desarrollando."
     },
     {
@@ -588,8 +568,7 @@
       "estado": "disponible",
       "temporadas": 6,
       "capitulos": 75,
-      "calificacion": 0,
-      "contadorNotas": 0,
+      "calificacion": 10,
       "descripcion": "La historia nos sitúa en un mundo donde la humanidad está al borde de la extinción debido a la existencia de unos seres humanoides gigantes conocidos como los Titanes."
     },
     {
@@ -603,7 +582,6 @@
       "temporadas": 5,
       "capitulos": 220,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Naruto Uzumaki es un joven ninja que tiene encerrado en su interior al Zorro de Nueve Colas, una bestia que atacó a la Aldea Oculta de la Hoja."
     },
     {
@@ -616,8 +594,7 @@
       "estado": "disponible",
       "temporadas": 1,
       "capitulos": 37,
-      "calificacion": 0,
-      "contadorNotas": 0,
+      "calificacion": 8,
       "descripcion": "Un estudiante encuentra un cuaderno con el poder de matar a cualquier persona cuyo nombre sea escrito en él. Decide utilizarlo para purgar el mundo de los criminales."
     },
     {
@@ -630,8 +607,7 @@
       "estado": "disponible",
       "temporadas": 1,
       "capitulos": 1100,
-      "calificacion": 0,
-      "contadorNotas": 0,
+      "calificacion": 9,
       "descripcion": "Monkey D. Luffy parte en busca del legendario tesoro One Piece para convertirse en el Rey de los Piratas. En su aventura recluta a un variopinto grupo de piratas."
     },
     {
@@ -645,7 +621,6 @@
       "temporadas": 1,
       "capitulos": 64,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Dos hermanos buscan la Piedra Filosofal para restaurar sus cuerpos después de un desastroso intento de alquimia. En su camino descubren una conspiración."
     },
     {
@@ -659,7 +634,6 @@
       "temporadas": 9,
       "capitulos": 291,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Goku y sus amigos defienden la Tierra de poderosos enemigos, desde guerreros saiyajin hasta androides y seres de otros planetas."
     },
     {
@@ -673,7 +647,6 @@
       "temporadas": 3,
       "capitulos": 48,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Tanjiro Kamado se convierte en un cazador de demonios para vengar la muerte de su familia y salvar a su hermana, quien se convirtió en demonio."
     },
     {
@@ -687,7 +660,6 @@
       "temporadas": 5,
       "capitulos": 113,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "En un mundo donde casi todos tienen superpoderes, un joven sin poderes se une a la Academia U.A. para convertirse en un héroe."
     },
     {
@@ -701,7 +673,6 @@
       "temporadas": 6,
       "capitulos": 148,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Gon Freecss decide convertirse en cazador para encontrar a su padre y descubre el mundo de los cazadores, lleno de peligros y misterios."
     },
     {
@@ -715,7 +686,6 @@
       "temporadas": 4,
       "capitulos": 97,
       "calificacion": 0,
-      "contadorNotas": 0,
       "descripcion": "Los jugadores quedan atrapados en un MMORPG virtual y deben completar el juego para poder salir. Kirito, uno de los jugadores, lidera la lucha por la supervivencia."
     },
     {

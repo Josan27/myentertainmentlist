@@ -1,36 +1,35 @@
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal {
-    background-color: #4e4e4e;
-    color: rgb(116, 10, 10); 
-    padding: 20px;
-    border-radius: 8px;
-    width: 500px;
-    max-width: 80%;
-    font-weight: bold;
-  }
-  
-  .modal img {
-    max-width: 100%;
-  }
-  
-  .modal label {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  .modal button {
-    margin-top: 10px;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #4e4e4e;
+  color: rgb(116, 10, 10); 
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 80%;
+  font-weight: bold;
+}
+
+.modal img {
+  max-width: 100%;
+}
+
+.modal label {
+  display: block;
+  margin: 10px 0;
+}
+
+.modal button {
+  margin-top: 10px;
+}
   

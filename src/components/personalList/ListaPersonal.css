@@ -1,123 +1,123 @@
 .personal-list-page {
-    padding: 20px;
-    background-color: #4e4e4e;
-    color: rgb(116, 10, 10); 
+  padding: 20px;
+  background-color: #4e4e4e;
+  color: rgb(116, 10, 10); 
 
-  }
-  
-  .personal-list-page h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .personal-list-page h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .section-select {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .section-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    background-color: #ddd;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: rgb(116, 10, 10); 
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .section-button.active {
-    background-color: #333;
-  }
-  
-  .section-button:hover:not(.active) {
-    background-color: #bbb;
-  }
-  
-  .section {
-    margin-bottom: 40px;
-  }
-  
-  .section h2 {
-    margin-bottom: 10px;
-  }
-  
-  .categories {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .category {
-    flex: 1;
-    background-color: white;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 0 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .category h3 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .category.active {
-    background-color: #333;
-  }
-  
-  .category:hover:not(.active) {
-    background-color: #bbb;
-  }
+}
+
+.personal-list-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.personal-list-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-select {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.section-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: rgb(116, 10, 10); 
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section-button.active {
+  background-color: #333;
+}
+
+.section-button:hover:not(.active) {
+  background-color: #bbb;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.category.active {
+  background-color: #333;
+}
+
+.category:hover:not(.active) {
+  background-color: #bbb;
+}
   
 .item-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 8px;
-    width: 200px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  margin-top: 20px;
 }
 
 .item-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .item-info {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .item-button {
-    background-color: rgb(116, 10, 10);
-    color: white;
-    padding: 5px 10px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: 10px;
+  background-color: rgb(116, 10, 10);
+  color: white;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
 }
 
 .item-button:hover {

@@ -1,60 +1,55 @@
 .card {
-    position: relative;
-    margin-top: -8px;
-  }
+  position: relative;
+  margin-top: -8px;
+}
   
-  .p-button {
-    background-color: rgb(116, 10, 10); 
-    color: black; 
-    border-radius: 5px; 
-    padding: 8px 16px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-    font-weight: bold;
-  }
-  
-  
-  .p-button .pi {
-    margin-right: 8px; 
-  }
-  
- 
-  .p-menu {
-    position: absolute; 
-    top: 40px; 
-    left: 0; 
-    z-index: 1000; 
-    background-color: #4e4e4e; 
-    border: 1px solid black; 
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  }
-  
-  
-  .p-menu .p-menuitem {
-    padding: 8px 16px; 
-    font-size: 16px;
-  }
-  
-  .p-menu .p-menuitem .pi {
-    margin-right: 8px; 
-  }
-  
-.p-menu .p-menuitem .p-menuitem-text {
-    color: rgb(116, 10, 10); 
-    font-weight: bold;
-  }
+.p-button {
+  background-color: rgb(116, 10, 10); 
+  color: black; 
+  border-radius: 5px; 
+  padding: 8px 16px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  font-weight: bold;
+}
+
+.p-button .pi {
+  margin-right: 8px; 
+}
+
+.p-menu {
+  position: absolute; 
+  top: 40px; 
+  left: 0; 
+  z-index: 1000; 
+  background-color: #4e4e4e; 
+  border: 1px solid black; 
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
 
 .p-menu .p-menuitem {
-    border-bottom: 1px solid #CCCCCC;
-    padding-bottom: 5px; 
-    margin-bottom: 5px;
-  }
-  
-  .p-menu .p-menuitem:last-child {
-    border-bottom: none; 
-    margin-bottom: 0; 
-  }
-  
-  
+  padding: 8px 16px; 
+  font-size: 16px;
+}
+
+.p-menu .p-menuitem .pi {
+  margin-right: 8px; 
+}
+
+.p-menu .p-menuitem .p-menuitem-text {
+  color: rgb(116, 10, 10); 
+  font-weight: bold;
+}
+
+.p-menu .p-menuitem {
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 5px; 
+  margin-bottom: 5px;
+}
+
+.p-menu .p-menuitem:last-child {
+  border-bottom: none; 
+  margin-bottom: 0; 
+}
